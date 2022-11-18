@@ -7,7 +7,7 @@ function Todo(props){
     const[modalIsOpen, setModalIsOpen] = useState(false);
 
     function deleteHandler(){
-        setModalIsOpen(true); //To change that modalIsOpen state from false
+        setModalIsOpen(true); 
     }
     function closeModalHandler(){
         setModalIsOpen(false);

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 23,
+            "activePatchIndex": 24,
             "patches": [
                 {
                     "date": 1668674450129,
@@ -100,6 +100,10 @@
                 {
                     "date": 1668755714785,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     <div className=\"card\">\r\n         <h2>{props.text}</h2>\r\n         <div className=\"actions\">\r\n             <span>Checkout</span>\r\n-            <button className=\"btn btn--alt\" onClick={deleteHandler}>Remove</button>\r\n+            <button className=\"btn\" onClick={deleteHandler}>Remove</button>\r\n         </div>\r\n         {modalIsOpen ? <Modal onCancel={closeModalHandler} onConfirm={closeModalHandler}/> : null}\r\n         {modalIsOpen ? <Backdrop onCancel={closeModalHandler}/> : null}\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1668757123723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \r\n     const[modalIsOpen, setModalIsOpen] = useState(false);\r\n \r\n     function deleteHandler(){\r\n-        setModalIsOpen(true); //To change that modalIsOpen state from false\r\n+        setModalIsOpen(true); \r\n     }\r\n     function closeModalHandler(){\r\n         setModalIsOpen(false);\r\n     }\r\n"
                 }
             ],
             "date": 1668674450129,
