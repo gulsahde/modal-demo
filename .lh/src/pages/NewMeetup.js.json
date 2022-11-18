@@ -1,0 +1,34 @@
+{
+    "sourceFile": "src/pages/NewMeetup.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1668631798982,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668633208946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function NewMeetupPage(){\r\n     return(\r\n-        <div>All Meetups Page</div>\r\n+        <div>New Meetup Page</div>\r\n     )\r\n }\r\n \r\n export default NewMeetupPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1668672961102,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import React from 'react';\r\n+\r\n function NewMeetupPage(){\r\n     return(\r\n         <div>New Meetup Page</div>\r\n     )\r\n"
+                },
+                {
+                    "date": 1668672994709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,4 @@\n-import React from 'react';\r\n-\r\n function NewMeetupPage(){\r\n     return(\r\n         <div>New Meetup Page</div>\r\n     )\r\n"
+                },
+                {
+                    "date": 1668674047605,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n-function NewMeetupPage(){\r\n-    return(\r\n-        <div>New Meetup Page</div>\r\n-    )\r\n-}\r\n+// function NewMeetupPage(){\r\n+//     return(\r\n\\ No newline at end of file\n+//         <div>New Meetup Page</div>\r\n+//     )\r\n+// }\r\n \r\n-export default NewMeetupPage;\n+// export default NewMeetupPage;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1668631798982,
+            "name": "Commit-0",
+            "content": "function NewMeetupPage(){\r\n    return(\r\n        <div>All Meetups Page</div>\r\n    )\r\n}\r\n\r\nexport default NewMeetupPage;"
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "sourceFile": "src/pages/AllMeetups.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1668631775031,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668671283858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function AllMeetupsPage(){\r\n-    return(\r\n+    return\r\n         <div>All Meetups Page</div>\r\n-    )\r\n+    \r\n }\r\n \r\n export default AllMeetupsPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1668671289662,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n function AllMeetupsPage(){\r\n-    return\r\n-        <div>All Meetups Page</div>\r\n+    return<div>All Meetups Page</div>\r\n     \r\n }\r\n \r\n export default AllMeetupsPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1668671339545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n function AllMeetupsPage(){\r\n-    return<div>All Meetups Page</div>\r\n-    \r\n+    return(\r\n+        <div><p>All Meetups Page</p></div>\r\n+    )\r\n }\r\n \r\n export default AllMeetupsPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1668671357416,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function AllMeetupsPage(){\r\n     return(\r\n-        <div><p>All Meetups Page</p></div>\r\n+        <div><h1>All Meetups Page</h1></div>\r\n     )\r\n }\r\n \r\n export default AllMeetupsPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1668671395460,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function AllMeetupsPage(){\r\n     return(\r\n-        <div><h1>All Meetups Page</h1></div>\r\n+        <div>All Meetups Page</div>\r\n     )\r\n }\r\n \r\n export default AllMeetupsPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1668671792818,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n function AllMeetupsPage(){\r\n     return(\r\n-        <div>All Meetups Page</div>\r\n+        <div>\r\n+            All Meetups Page\r\n+        </div>\r\n     )\r\n }\r\n \r\n export default AllMeetupsPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1668672965401,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import React from 'react';\r\n+\r\n function AllMeetupsPage(){\r\n     return(\r\n         <div>\r\n             All Meetups Page\r\n"
+                },
+                {
+                    "date": 1668672985931,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,4 @@\n-import React from 'react';\r\n-\r\n function AllMeetupsPage(){\r\n     return(\r\n         <div>\r\n             All Meetups Page\r\n"
+                },
+                {
+                    "date": 1668674037617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +0,0 @@\n-function AllMeetupsPage(){\r\n-    return(\r\n-        <div>\r\n-            All Meetups Page\r\n-        </div>\r\n-    )\r\n-}\r\n-\r\n-export default AllMeetupsPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1668674044927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,9 @@\n+// function AllMeetupsPage(){\r\n+//     return(\r\n+//         <div>\r\n+//             All Meetups Page\r\n+//         </div>\r\n+//     )\r\n+// }\r\n+\r\n+// export default AllMeetupsPage;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1668631775031,
+            "name": "Commit-0",
+            "content": "function AllMeetupsPage(){\r\n    return(\r\n        <div>All Meetups Page</div>\r\n    )\r\n}\r\n\r\nexport default AllMeetupsPage;"
+        }
+    ]
+}

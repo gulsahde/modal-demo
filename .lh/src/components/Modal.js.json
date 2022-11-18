@@ -1,0 +1,34 @@
+{
+    "sourceFile": "src/components/Modal.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1668688796203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668719592226,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n-function Modal(){\r\n+function Modal(props){\r\n     return(\r\n         <div className=\"modal\">\r\n             <p>Are you sure?</p>\r\n-            <button className=\"btn btn--alt\">Cancel</button>\r\n-            <button className=\"btn\">Confirm</button>\r\n+            <button className=\"btn btn--alt\" onClick={props.onCancel}>Cancel</button>\r\n+            <button className=\"btn\" onClick={props.onCancel}>Confirm</button>\r\n         </div>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1668719795243,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,16 @@\n function Modal(props){\r\n+    function cancelHandler(){\r\n+        props.onCancel();\r\n+    }\r\n+    function confirmHandler(){\r\n+\r\n+    }\r\n     return(\r\n         <div className=\"modal\">\r\n             <p>Are you sure?</p>\r\n-            <button className=\"btn btn--alt\" onClick={props.onCancel}>Cancel</button>\r\n-            <button className=\"btn\" onClick={props.onCancel}>Confirm</button>\r\n+            <button className=\"btn btn--alt\" onClick={cancelHandler}>Cancel</button>\r\n+            <button className=\"btn\" onClick={confirmHandler}>Confirm</button>\r\n         </div>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1668720175906,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n function Modal(props){\r\n     function cancelHandler(){\r\n         props.onCancel();\r\n+\r\n     }\r\n     function confirmHandler(){\r\n+        props.onConfirm();\r\n \r\n     }\r\n     return(\r\n         <div className=\"modal\">\r\n"
+                },
+                {
+                    "date": 1668720243297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n function Modal(props){\r\n+   \r\n     function cancelHandler(){\r\n         props.onCancel();\r\n \r\n     }\r\n"
+                }
+            ],
+            "date": 1668688796203,
+            "name": "Commit-0",
+            "content": "function Modal(){\r\n    return(\r\n        <div className=\"modal\">\r\n            <p>Are you sure?</p>\r\n            <button className=\"btn btn--alt\">Cancel</button>\r\n            <button className=\"btn\">Confirm</button>\r\n        </div>\r\n    )\r\n}\r\n\r\nexport default Modal;"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/components/Backdrop.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1668688667711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668719230951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-function Backdrop(){\r\n-    return <div className=\"backdrop\" />   \r\n+function Backdrop(props){\r\n+    return <div className=\"backdrop\" onCancel={props.onClick}/>   \r\n }\r\n \r\n export default Backdrop;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1668719343787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n function Backdrop(props){\r\n-    return <div className=\"backdrop\" onCancel={props.onClick}/>   \r\n+    return <div className=\"backdrop\" onClick={props.onCancel}/>   \r\n }\r\n \r\n export default Backdrop;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1668688667711,
+            "name": "Commit-0",
+            "content": "function Backdrop(){\r\n    return <div className=\"backdrop\" />   \r\n}\r\n\r\nexport default Backdrop;"
+        }
+    ]
+}

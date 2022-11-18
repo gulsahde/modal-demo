@@ -1,0 +1,90 @@
+{
+    "sourceFile": "src/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 18,
+            "patches": [
+                {
+                    "date": 1668603784901,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668624989430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,15 @@\n import React from 'react';\n-import ReactDOM from 'react-dom/client';\n+import ReactDOM from 'react-dom/client'; //importing ReactDOM object from the react-dom library.\n+//ReactDOM object is not object we created; that is an object created by React team\n+\n import './index.css';\n import App from './App';\n \n-const root = ReactDOM.createRoot(document.getElementById('root'));\n-root.render(\n-  <React.StrictMode>\n\\ No newline at end of file\n-    <App />\n-  </React.StrictMode>\n-);\n+//const root = ReactDOM.createRoot(document.getElementById('root')); //\"render\" is from HTML. Here, we use an HTML code in Javascript.\n+// root.render(\n+//   <React.StrictMode>\n+//     <App />\n+//   </React.StrictMode>\n+// );\n+\n+ReactDOM.render(<App />, document.getElementById('root'));\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1668625051229,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,11 @@\n \n import './index.css';\n import App from './App';\n \n-//const root = ReactDOM.createRoot(document.getElementById('root')); //\"render\" is from HTML. Here, we use an HTML code in Javascript.\n-// root.render(\n-//   <React.StrictMode>\n-//     <App />\n-//   </React.StrictMode>\n-// );\n+const root = ReactDOM.createRoot(document.getElementById('root')); //\"render\" is from HTML. Here, we use an HTML code in Javascript.\n+root.render(\n\\ No newline at end of file\n+  <React.StrictMode>\n+    <App />\n+  </React.StrictMode>\n+);\n \n-ReactDOM.render(<App />, document.getElementById('root'));\n"
+                },
+                {
+                    "date": 1668631957290,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,19 @@\n import React from 'react';\n import ReactDOM from 'react-dom/client'; //importing ReactDOM object from the react-dom library.\n //ReactDOM object is not object we created; that is an object created by React team\n \n+import {BrowserRouter} from 'react-router-dom'\n import './index.css';\n-import App from './App';\n+import App from './App'; \n \n const root = ReactDOM.createRoot(document.getElementById('root')); //\"render\" is from HTML. Here, we use an HTML code in Javascript.\n root.render(\n   <React.StrictMode>\n-    <App />\n\\ No newline at end of file\n+    <BrowserRouter>\n+    <App /> \n+    </BrowserRouter>\n   </React.StrictMode>\n-);\n+);\n+\n+// Also, <App /> is a HTML element.\n+\n"
+                },
+                {
+                    "date": 1668632646388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,13 +7,14 @@\n import App from './App'; \n \n const root = ReactDOM.createRoot(document.getElementById('root')); //\"render\" is from HTML. Here, we use an HTML code in Javascript.\n root.render(\n+  <BrowserRouter>\n   <React.StrictMode>\n-    <BrowserRouter>\n     <App /> \n-    </BrowserRouter>\n+    \n   </React.StrictMode>\n+  </BrowserRouter>\n );\n \n // Also, <App /> is a HTML element.\n \n"
+                },
+                {
+                    "date": 1668632711011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,14 +7,13 @@\n import App from './App'; \n \n const root = ReactDOM.createRoot(document.getElementById('root')); //\"render\" is from HTML. Here, we use an HTML code in Javascript.\n root.render(\n-  <BrowserRouter>\n   <React.StrictMode>\n+    <BrowserRouter>\n     <App /> \n-    \n+    </BrowserRouter>\n   </React.StrictMode>\n-  </BrowserRouter>\n );\n \n // Also, <App /> is a HTML element.\n \n"
+                },
+                {
+                    "date": 1668632724196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,13 +7,13 @@\n import App from './App'; \n \n const root = ReactDOM.createRoot(document.getElementById('root')); //\"render\" is from HTML. Here, we use an HTML code in Javascript.\n root.render(\n-  <React.StrictMode>\n+  // <React.StrictMode>\n     <BrowserRouter>\n     <App /> \n     </BrowserRouter>\n-  </React.StrictMode>\n+  // </React.StrictMode>\n );\n \n // Also, <App /> is a HTML element.\n \n"
+                },
+                {
+                    "date": 1668633255629,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,13 +7,13 @@\n import App from './App'; \n \n const root = ReactDOM.createRoot(document.getElementById('root')); //\"render\" is from HTML. Here, we use an HTML code in Javascript.\n root.render(\n-  // <React.StrictMode>\n+  <React.StrictMode>\n     <BrowserRouter>\n     <App /> \n     </BrowserRouter>\n-  // </React.StrictMode>\n+  </React.StrictMode>\n );\n \n // Also, <App /> is a HTML element.\n \n"
+                },
+                {
+                    "date": 1668633713012,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,13 +7,13 @@\n import App from './App'; \n \n const root = ReactDOM.createRoot(document.getElementById('root')); //\"render\" is from HTML. Here, we use an HTML code in Javascript.\n root.render(\n-  <React.StrictMode>\n+  // <React.StrictMode>\n     <BrowserRouter>\n-    <App /> \n+      <App /> \n     </BrowserRouter>\n-  </React.StrictMode>\n+  // </React.StrictMode>\n );\n \n // Also, <App /> is a HTML element.\n \n"
+                },
+                {
+                    "date": 1668670478060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n root.render(\n   // <React.StrictMode>\n     <BrowserRouter>\n       <App /> \n-    </BrowserRouter>\n+    </BrowserRouter>,\n   // </React.StrictMode>\n );\n \n // Also, <App /> is a HTML element.\n"
+                },
+                {
+                    "date": 1668670506800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n root.render(\n   // <React.StrictMode>\n     <BrowserRouter>\n       <App /> \n-    </BrowserRouter>,\n+    </BrowserRouter>\n   // </React.StrictMode>\n );\n \n // Also, <App /> is a HTML element.\n"
+                },
+                {
+                    "date": 1668670623622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,15 +5,21 @@\n import {BrowserRouter} from 'react-router-dom'\n import './index.css';\n import App from './App'; \n \n-const root = ReactDOM.createRoot(document.getElementById('root')); //\"render\" is from HTML. Here, we use an HTML code in Javascript.\n-root.render(\n-  // <React.StrictMode>\n-    <BrowserRouter>\n-      <App /> \n-    </BrowserRouter>\n-  // </React.StrictMode>\n-);\n+// const root = ReactDOM.createRoot(document.getElementById('root')); //\"render\" is from HTML. Here, we use an HTML code in Javascript.\n+// root.render(\n+//     <BrowserRouter>\n+//       <App /> \n+//     </BrowserRouter>\n+ \n+// );\n \n // Also, <App /> is a HTML element.\n \n+ReactDOM.render(\n+  <BrowserRouter>\n+    <App />\n+  </BrowserRouter>,\n+  document.getElementById(\"root\")\n+);\n+\n"
+                },
+                {
+                    "date": 1668670647376,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,21 +5,21 @@\n import {BrowserRouter} from 'react-router-dom'\n import './index.css';\n import App from './App'; \n \n-// const root = ReactDOM.createRoot(document.getElementById('root')); //\"render\" is from HTML. Here, we use an HTML code in Javascript.\n-// root.render(\n-//     <BrowserRouter>\n-//       <App /> \n-//     </BrowserRouter>\n+const root = ReactDOM.createRoot(document.getElementById('root')); //\"render\" is from HTML. Here, we use an HTML code in Javascript.\n+root.render(\n+    <BrowserRouter>\n+      <App /> \n+    </BrowserRouter>\n  \n-// );\n+);\n \n // Also, <App /> is a HTML element.\n \n-ReactDOM.render(\n-  <BrowserRouter>\n-    <App />\n-  </BrowserRouter>,\n-  document.getElementById(\"root\")\n-);\n+// ReactDOM.render(\n+//   <BrowserRouter>\n+//     <App />\n+//   </BrowserRouter>,\n+//   document.getElementById(\"root\")\n+// );\n \n"
+                },
+                {
+                    "date": 1668671085720,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n import React from 'react';\n import ReactDOM from 'react-dom/client'; //importing ReactDOM object from the react-dom library.\n //ReactDOM object is not object we created; that is an object created by React team\n \n+import reportWebVitals from './reportWebVitals';\n import {BrowserRouter} from 'react-router-dom'\n import './index.css';\n import App from './App'; \n \n"
+                },
+                {
+                    "date": 1668671090985,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,8 @@\n import React from 'react';\n import ReactDOM from 'react-dom/client'; //importing ReactDOM object from the react-dom library.\n //ReactDOM object is not object we created; that is an object created by React team\n \n-import reportWebVitals from './reportWebVitals';\n import {BrowserRouter} from 'react-router-dom'\n import './index.css';\n import App from './App'; \n \n"
+                },
+                {
+                    "date": 1668672969388,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n \n import {BrowserRouter} from 'react-router-dom'\n import './index.css';\n import App from './App'; \n+import React from 'react';\n \n const root = ReactDOM.createRoot(document.getElementById('root')); //\"render\" is from HTML. Here, we use an HTML code in Javascript.\n root.render(\n     <BrowserRouter>\n"
+                },
+                {
+                    "date": 1668672976231,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,8 @@\n \n import {BrowserRouter} from 'react-router-dom'\n import './index.css';\n import App from './App'; \n-import React from 'react';\n \n const root = ReactDOM.createRoot(document.getElementById('root')); //\"render\" is from HTML. Here, we use an HTML code in Javascript.\n root.render(\n     <BrowserRouter>\n"
+                },
+                {
+                    "date": 1668674152148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,25 +1,16 @@\n import React from 'react';\n-import ReactDOM from 'react-dom/client'; //importing ReactDOM object from the react-dom library.\n+//import ReactDOM from 'react-dom/client'; //importing ReactDOM object from the react-dom library.\n //ReactDOM object is not object we created; that is an object created by React team\n \n-import {BrowserRouter} from 'react-router-dom'\n import './index.css';\n import App from './App'; \n \n const root = ReactDOM.createRoot(document.getElementById('root')); //\"render\" is from HTML. Here, we use an HTML code in Javascript.\n root.render(\n-    <BrowserRouter>\n+    <React.StrictMode>\n       <App /> \n-    </BrowserRouter>\n+    </React.StrictMode>\n  \n );\n \n // Also, <App /> is a HTML element.\n-\n-// ReactDOM.render(\n-//   <BrowserRouter>\n-//     <App />\n-//   </BrowserRouter>,\n-//   document.getElementById(\"root\")\n-// );\n-\n"
+                },
+                {
+                    "date": 1668674157448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import React from 'react';\n-//import ReactDOM from 'react-dom/client'; //importing ReactDOM object from the react-dom library.\n+import ReactDOM from 'react-dom/client'; //importing ReactDOM object from the react-dom library.\n //ReactDOM object is not object we created; that is an object created by React team\n \n import './index.css';\n import App from './App'; \n"
+                }
+            ],
+            "date": 1668603784900,
+            "name": "Commit-0",
+            "content": "import React from 'react';\nimport ReactDOM from 'react-dom/client';\nimport './index.css';\nimport App from './App';\n\nconst root = ReactDOM.createRoot(document.getElementById('root'));\nroot.render(\n  <React.StrictMode>\n    <App />\n  </React.StrictMode>\n);"
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/pages/Favorites.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1668631800900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668633217508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function FavoritesPage(){\r\n     return(\r\n-        <div>All Meetups Page</div>\r\n+        <div>Favorites Page</div>\r\n     )\r\n }\r\n \r\n export default FavoritesPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1668671373308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function FavoritesPage(){\r\n     return(\r\n-        <div>Favorites Page</div>\r\n+        <div><h1>All Meetups Page</h1></div>\r\n     )\r\n }\r\n \r\n export default FavoritesPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1668672810202,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function FavoritesPage(){\r\n     return(\r\n-        <div><h1>All Meetups Page</h1></div>\r\n+        <div>Favorites Page</div>\r\n     )\r\n }\r\n \r\n export default FavoritesPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1668672957693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import React from 'react';\r\n+\r\n function FavoritesPage(){\r\n     return(\r\n         <div>Favorites Page</div>\r\n     )\r\n"
+                },
+                {
+                    "date": 1668672999979,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,4 @@\n-import React from 'react';\r\n-\r\n function FavoritesPage(){\r\n     return(\r\n         <div>Favorites Page</div>\r\n     )\r\n"
+                },
+                {
+                    "date": 1668674054569,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n-function FavoritesPage(){\r\n-    return(\r\n-        <div>Favorites Page</div>\r\n-    )\r\n-}\r\n+// import React from 'react';\r\n \r\n\\ No newline at end of file\n-export default FavoritesPage;\n+// function FavoritesPage(){\r\n+//     return(\r\n+//         <div>Favorites Page</div>\r\n+//     )\r\n+// }\r\n+\r\n+// export default FavoritesPage;\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1668631800900,
+            "name": "Commit-0",
+            "content": "function FavoritesPage(){\r\n    return(\r\n        <div>All Meetups Page</div>\r\n    )\r\n}\r\n\r\nexport default FavoritesPage;"
+        }
+    ]
+}

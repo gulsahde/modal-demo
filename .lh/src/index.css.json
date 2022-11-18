@@ -1,0 +1,82 @@
+{
+    "sourceFile": "src/index.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 16,
+            "patches": [
+                {
+                    "date": 1668603900366,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668628925259,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,73 @@\n+* {\r\n+    box-sizing: border-box;\r\n+  }\r\n+  \r\n+  body {\r\n+    font-family: sans-serif;\r\n+    margin: 3rem;\r\n+    background-color: #dfdfdf;\r\n+  }\r\n+  \r\n+  h1, h2 {\r\n+    color: #333333;\r\n+  }\r\n+  \r\n+  .btn {\r\n+    font: inherit;\r\n+    padding: 0.5rem 1.5rem;\r\n+    cursor: pointer;\r\n+    border-radius: 4px;\r\n+    background-color: #800040;\r\n+    color: white;\r\n+    border: 1px solid #800040;\r\n+    margin: 0 1rem;\r\n+  }\r\n+  \r\n+  .btn:hover {\r\n+    background-color: #9c1458;\r\n+    border-color: #9c1458;\r\n+  }\r\n+  \r\n+  .btn--alt {\r\n+    background-color: transparent;\r\n+    color: #800040;\r\n+  }\r\n+  \r\n+  .btn--alt:hover {\r\n+    background-color: #f8dae9;\r\n+  }\r\n+  \r\n+  .card {\r\n+    background-color: white;\r\n+    border-radius: 4px;\r\n+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\r\n+    padding: 1rem;\r\n+    width: 20rem;\r\n+  }\r\n+  \r\n+  .actions {\r\n+    text-align: right;\r\n+  }\r\n+  \r\n+  .modal {\r\n+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\r\n+    border-radius: 6px;\r\n+    background-color: white;\r\n+    padding: 1rem;\r\n+    text-align: center;\r\n+    width: 30rem;\r\n+    z-index: 10;\r\n+    position: fixed;\r\n+    top: 20vh;\r\n+    left: calc(50% - 15rem);\r\n+  }\r\n+  \r\n+  .backdrop {\r\n+    position: fixed;\r\n+    z-index: 1;\r\n+    background-color: rgba(0, 0, 0, 0.75);\r\n+    width: 100%;\r\n+    height: 100vh;\r\n+    top: 0;\r\n+    left: 0;\r\n+  }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1668629817959,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,73 +1,21 @@\n+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');\r\n+\r\n * {\r\n-    box-sizing: border-box;\r\n-  }\r\n-  \r\n-  body {\r\n-    font-family: sans-serif;\r\n-    margin: 3rem;\r\n-    background-color: #dfdfdf;\r\n-  }\r\n-  \r\n-  h1, h2 {\r\n-    color: #333333;\r\n-  }\r\n-  \r\n-  .btn {\r\n-    font: inherit;\r\n-    padding: 0.5rem 1.5rem;\r\n-    cursor: pointer;\r\n-    border-radius: 4px;\r\n-    background-color: #800040;\r\n-    color: white;\r\n-    border: 1px solid #800040;\r\n-    margin: 0 1rem;\r\n-  }\r\n-  \r\n-  .btn:hover {\r\n-    background-color: #9c1458;\r\n-    border-color: #9c1458;\r\n-  }\r\n-  \r\n-  .btn--alt {\r\n-    background-color: transparent;\r\n-    color: #800040;\r\n-  }\r\n-  \r\n-  .btn--alt:hover {\r\n-    background-color: #f8dae9;\r\n-  }\r\n-  \r\n-  .card {\r\n-    background-color: white;\r\n-    border-radius: 4px;\r\n-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\r\n-    padding: 1rem;\r\n-    width: 20rem;\r\n-  }\r\n-  \r\n-  .actions {\r\n-    text-align: right;\r\n-  }\r\n-  \r\n-  .modal {\r\n-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\r\n-    border-radius: 6px;\r\n-    background-color: white;\r\n-    padding: 1rem;\r\n-    text-align: center;\r\n-    width: 30rem;\r\n-    z-index: 10;\r\n-    position: fixed;\r\n-    top: 20vh;\r\n-    left: calc(50% - 15rem);\r\n-  }\r\n-  \r\n-  .backdrop {\r\n-    position: fixed;\r\n-    z-index: 1;\r\n-    background-color: rgba(0, 0, 0, 0.75);\r\n-    width: 100%;\r\n-    height: 100vh;\r\n-    top: 0;\r\n\\ No newline at end of file\n-    left: 0;\r\n-  }\n+  box-sizing: border-box;\r\n+}\r\n+\r\n+body {\r\n+  font-family: 'Open Sans', sans-serif;\r\n+  margin: 0;\r\n+  background-color: #fcf3f6;\r\n+}\r\n+\r\n+h1 {\r\n+  font-size: 2.5rem;\r\n+  color: #2c292b;\r\n+}\r\n+\r\n+h2 {\r\n+  font-size: 1.5rem;\r\n+  color: #2c292b;\r\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1668674493444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,21 +1,73 @@\n-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');\r\n-\r\n * {\r\n   box-sizing: border-box;\r\n }\r\n \r\n body {\r\n-  font-family: 'Open Sans', sans-serif;\r\n-  margin: 0;\r\n-  background-color: #fcf3f6;\r\n+  font-family: sans-serif;\r\n+  margin: 3rem;\r\n+  background-color: #dfdfdf;\r\n }\r\n \r\n-h1 {\r\n-  font-size: 2.5rem;\r\n-  color: #2c292b;\r\n+h1, h2 {\r\n+  color: #333333;\r\n }\r\n \r\n-h2 {\r\n-  font-size: 1.5rem;\r\n-  color: #2c292b;\r\n+.btn {\r\n+  font: inherit;\r\n+  padding: 0.5rem 1.5rem;\r\n+  cursor: pointer;\r\n+  border-radius: 4px;\r\n+  background-color: #800040;\r\n+  color: white;\r\n+  border: 1px solid #800040;\r\n+  margin: 0 1rem;\r\n+}\r\n+\r\n+.btn:hover {\r\n+  background-color: #9c1458;\r\n+  border-color: #9c1458;\r\n+}\r\n+\r\n+.btn--alt {\r\n+  background-color: transparent;\r\n+  color: #800040;\r\n+}\r\n+\r\n+.btn--alt:hover {\r\n+  background-color: #f8dae9;\r\n+}\r\n+\r\n+.card {\r\n+  background-color: white;\r\n+  border-radius: 4px;\r\n+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\r\n+  padding: 1rem;\r\n+  width: 20rem;\r\n+}\r\n+\r\n+.actions {\r\n+  text-align: right;\r\n+}\r\n+\r\n+.modal {\r\n+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\r\n+  border-radius: 6px;\r\n+  background-color: white;\r\n+  padding: 1rem;\r\n+  text-align: center;\r\n+  width: 30rem;\r\n+  z-index: 10;\r\n+  position: fixed;\r\n+  top: 20vh;\r\n+  left: calc(50% - 15rem);\r\n+}\r\n+\r\n+.backdrop {\r\n+  position: fixed;\r\n+  z-index: 1;\r\n+  background-color: rgba(0, 0, 0, 0.75);\r\n+  width: 100%;\r\n+  height: 100vh;\r\n+  top: 0;\r\n+  left: 0;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1668755774915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,11 +16,11 @@\n   font: inherit;\r\n   padding: 0.5rem 1.5rem;\r\n   cursor: pointer;\r\n   border-radius: 4px;\r\n-  background-color: #800040;\r\n+  background-color: #117A65;\r\n   color: white;\r\n-  border: 1px solid #800040;\r\n+  border: 1px solid #117A65;\r\n   margin: 0 1rem;\r\n }\r\n \r\n .btn:hover {\r\n@@ -29,9 +29,9 @@\n }\r\n \r\n .btn--alt {\r\n   background-color: transparent;\r\n-  color: #800040;\r\n+  color: #117A65;\r\n }\r\n \r\n .btn--alt:hover {\r\n   background-color: #f8dae9;\r\n"
+                },
+                {
+                    "date": 1668755804427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,10 +23,10 @@\n   margin: 0 1rem;\r\n }\r\n \r\n .btn:hover {\r\n-  background-color: #9c1458;\r\n-  border-color: #9c1458;\r\n+  background-color: #1ABC9C;\r\n+  border-color: #1ABC9C;\r\n }\r\n \r\n .btn--alt {\r\n   background-color: transparent;\r\n"
+                },
+                {
+                    "date": 1668755856034,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,10 @@\n \r\n body {\r\n   font-family: sans-serif;\r\n   margin: 3rem;\r\n-  background-color: #dfdfdf;\r\n+  background-color: #FDEBD0;\r\n+  /* #dfdfdf; */\r\n }\r\n \r\n h1, h2 {\r\n   color: #333333;\r\n"
+                },
+                {
+                    "date": 1668755922952,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n body {\r\n   font-family: sans-serif;\r\n   margin: 3rem;\r\n-  background-color: #FDEBD0;\r\n+  background-color: #FBEEE6;\r\n   /* #dfdfdf; */\r\n }\r\n \r\n h1, h2 {\r\n@@ -38,9 +38,10 @@\n   background-color: #f8dae9;\r\n }\r\n \r\n .card {\r\n-  background-color: white;\r\n+  background-color:\r\n+   /* white; */\r\n   border-radius: 4px;\r\n   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\r\n   padding: 1rem;\r\n   width: 20rem;\r\n"
+                },
+                {
+                    "date": 1668755935748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n   background-color: #f8dae9;\r\n }\r\n \r\n .card {\r\n-  background-color:\r\n+  background-color:#EDBB99;\r\n    /* white; */\r\n   border-radius: 4px;\r\n   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\r\n   padding: 1rem;\r\n"
+                },
+                {
+                    "date": 1668755961726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n body {\r\n   font-family: sans-serif;\r\n   margin: 3rem;\r\n-  background-color: #FBEEE6;\r\n+  background-color: #FDFEFE;\r\n   /* #dfdfdf; */\r\n }\r\n \r\n h1, h2 {\r\n"
+                },
+                {
+                    "date": 1668755981239,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n   background-color: #f8dae9;\r\n }\r\n \r\n .card {\r\n-  background-color:#EDBB99;\r\n+  background-color:#F6DDCC;\r\n    /* white; */\r\n   border-radius: 4px;\r\n   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\r\n   padding: 1rem;\r\n"
+                },
+                {
+                    "date": 1668756013923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,11 +17,11 @@\n   font: inherit;\r\n   padding: 0.5rem 1.5rem;\r\n   cursor: pointer;\r\n   border-radius: 4px;\r\n-  background-color: #117A65;\r\n+  background-color: #5DADE2;\r\n   color: white;\r\n-  border: 1px solid #117A65;\r\n+  border: 1px solid #5DADE2;\r\n   margin: 0 1rem;\r\n }\r\n \r\n .btn:hover {\r\n@@ -30,9 +30,9 @@\n }\r\n \r\n .btn--alt {\r\n   background-color: transparent;\r\n-  color: #117A65;\r\n+  color: #5DADE2;\r\n }\r\n \r\n .btn--alt:hover {\r\n   background-color: #f8dae9;\r\n"
+                },
+                {
+                    "date": 1668756036783,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,10 +24,10 @@\n   margin: 0 1rem;\r\n }\r\n \r\n .btn:hover {\r\n-  background-color: #1ABC9C;\r\n-  border-color: #1ABC9C;\r\n+  background-color: #AED6F1;\r\n+  border-color: #AED6F1;\r\n }\r\n \r\n .btn--alt {\r\n   background-color: transparent;\r\n"
+                },
+                {
+                    "date": 1668756062797,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n   background-color: #f8dae9;\r\n }\r\n \r\n .card {\r\n-  background-color:#F6DDCC;\r\n+  background-color:#D0D3D4;\r\n    /* white; */\r\n   border-radius: 4px;\r\n   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\r\n   padding: 1rem;\r\n"
+                },
+                {
+                    "date": 1668756075395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n   background-color: #f8dae9;\r\n }\r\n \r\n .card {\r\n-  background-color:#D0D3D4;\r\n+  background-color:#F0F3F4;\r\n    /* white; */\r\n   border-radius: 4px;\r\n   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\r\n   padding: 1rem;\r\n"
+                },
+                {
+                    "date": 1668756115026,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,11 +17,11 @@\n   font: inherit;\r\n   padding: 0.5rem 1.5rem;\r\n   cursor: pointer;\r\n   border-radius: 4px;\r\n-  background-color: #5DADE2;\r\n+  background-color: #CB4335;\r\n   color: white;\r\n-  border: 1px solid #5DADE2;\r\n+  border: 1px solid #CB4335;\r\n   margin: 0 1rem;\r\n }\r\n \r\n .btn:hover {\r\n@@ -30,9 +30,9 @@\n }\r\n \r\n .btn--alt {\r\n   background-color: transparent;\r\n-  color: #5DADE2;\r\n+  color: #CB4335;\r\n }\r\n \r\n .btn--alt:hover {\r\n   background-color: #f8dae9;\r\n"
+                },
+                {
+                    "date": 1668756129816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,10 +24,10 @@\n   margin: 0 1rem;\r\n }\r\n \r\n .btn:hover {\r\n-  background-color: #AED6F1;\r\n-  border-color: #AED6F1;\r\n+  background-color: #EC7063;\r\n+  border-color: #EC7063;\r\n }\r\n \r\n .btn--alt {\r\n   background-color: transparent;\r\n"
+                }
+            ],
+            "date": 1668603900366,
+            "name": "Commit-0",
+            "content": ""
+        }
+    ]
+}

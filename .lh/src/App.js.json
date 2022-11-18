@@ -1,0 +1,118 @@
+{
+    "sourceFile": "src/App.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 25,
+            "patches": [
+                {
+                    "date": 1668603904122,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668628877462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,15 @@\n function App() {\n   return (\n-    <div>Hello</div>\n+    <div>\n+      <h1>My Todos</h1>\n+      <div>\n+        <h2>TITLE</h2>\n+        <div>\n+          <button>Delete</button>\n+        </div>\n+      </div>\n+    </div>\n   );\n }\n \n export default App;\n"
+                },
+                {
+                    "date": 1668629073492,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n function App() {\n   return (\n     <div>\n       <h1>My Todos</h1>\n-      <div>\n+      <div class='card'>\n         <h2>TITLE</h2>\n         <div>\n           <button>Delete</button>\n         </div>\n"
+                },
+                {
+                    "date": 1668629086476,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n function App() {\n   return (\n     <div>\n       <h1>My Todos</h1>\n-      <div class='card'>\n+      <div>\n         <h2>TITLE</h2>\n         <div>\n           <button>Delete</button>\n         </div>\n"
+                },
+                {
+                    "date": 1668629469161,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n function App() {\n   return (\n     <div>\n       <h1>My Todos</h1>\n-      <div>\n+      <div className='card'>\n         <h2>TITLE</h2>\n-        <div>\n-          <button>Delete</button>\n+        <div className=\"actions\">\n+          <button className=\"btn\">Delete</button>\n         </div>\n       </div>\n     </div>\n   );\n"
+                },
+                {
+                    "date": 1668629867148,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,7 @@\n function App() {\n   return (\n-    <div>\n-      <h1>My Todos</h1>\n-      <div className='card'>\n-        <h2>TITLE</h2>\n-        <div className=\"actions\">\n-          <button className=\"btn\">Delete</button>\n-        </div>\n-      </div>\n-    </div>\n+    \n   );\n }\n \n export default App;\n"
+                },
+                {
+                    "date": 1668632581214,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,26 @@\n+import {Route} from 'react-router-dom'\n+\n+import AllMeetupsPage from './pages/AllMeetups';\n+import FavoritesPage from './pages/Favorites';\n+import NewMeetupPage from './pages/NewMeetup';\n+\n function App() {\n   return (\n-    \n+    <div>\n+      {/* After the domain name (localhost:3000/ or mydomain.com/), it's path */}\n+      <Route path='/'> {/* You should write routed pages with URL paths after the domain name */}\n+        <AllMeetupsPage />\n+      </Route> \n+      <Route>\n+        <NewMeetupPage path='new-meetup'/> \n+        {/* domain.com/new-meetup */}\n+      </Route>\n+      <Route>\n+        <FavoritesPage path='favorites'/>\n+        {/* domain.com/favorites */}\n+      </Route>\n+    </div>\n   );\n }\n \n export default App;\n"
+                },
+                {
+                    "date": 1668634124870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,14 +10,14 @@\n       {/* After the domain name (localhost:3000/ or mydomain.com/), it's path */}\n       <Route path='/'> {/* You should write routed pages with URL paths after the domain name */}\n         <AllMeetupsPage />\n       </Route> \n-      <Route>\n-        <NewMeetupPage path='new-meetup'/> \n+      <Route path='new-meetup'>\n+        <NewMeetupPage/> \n         {/* domain.com/new-meetup */}\n       </Route>\n-      <Route>\n-        <FavoritesPage path='favorites'/>\n+      <Route path='favorites'>\n+        <FavoritesPage/>\n         {/* domain.com/favorites */}\n       </Route>\n     </div>\n   );\n"
+                },
+                {
+                    "date": 1668634242754,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,13 +10,13 @@\n       {/* After the domain name (localhost:3000/ or mydomain.com/), it's path */}\n       <Route path='/'> {/* You should write routed pages with URL paths after the domain name */}\n         <AllMeetupsPage />\n       </Route> \n-      <Route path='new-meetup'>\n+      <Route path='/new-meetup'>\n         <NewMeetupPage/> \n         {/* domain.com/new-meetup */}\n       </Route>\n-      <Route path='favorites'>\n+      <Route path='/favorites'>\n         <FavoritesPage/>\n         {/* domain.com/favorites */}\n       </Route>\n     </div>\n"
+                },
+                {
+                    "date": 1668634320027,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import {Route} from 'react-router-dom'\n+import React from \"react\";\n \n import AllMeetupsPage from './pages/AllMeetups';\n import FavoritesPage from './pages/Favorites';\n import NewMeetupPage from './pages/NewMeetup';\n"
+                },
+                {
+                    "date": 1668634329231,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n import {Route} from 'react-router-dom'\n-import React from \"react\";\n \n import AllMeetupsPage from './pages/AllMeetups';\n import FavoritesPage from './pages/Favorites';\n import NewMeetupPage from './pages/NewMeetup';\n"
+                },
+                {
+                    "date": 1668672916872,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,16 +10,19 @@\n       {/* After the domain name (localhost:3000/ or mydomain.com/), it's path */}\n       <Route path='/'> {/* You should write routed pages with URL paths after the domain name */}\n         <AllMeetupsPage />\n       </Route> \n+\n       <Route path='/new-meetup'>\n         <NewMeetupPage/> \n         {/* domain.com/new-meetup */}\n       </Route>\n+\n       <Route path='/favorites'>\n         <FavoritesPage/>\n         {/* domain.com/favorites */}\n       </Route>\n+      \n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1668672947343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import {Route} from 'react-router-dom'\n-\n+import React from 'react';\n import AllMeetupsPage from './pages/AllMeetups';\n import FavoritesPage from './pages/Favorites';\n import NewMeetupPage from './pages/NewMeetup';\n \n@@ -20,9 +20,9 @@\n       <Route path='/favorites'>\n         <FavoritesPage/>\n         {/* domain.com/favorites */}\n       </Route>\n-      \n+\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1668673003844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,5 @@\n import {Route} from 'react-router-dom'\n-import React from 'react';\n import AllMeetupsPage from './pages/AllMeetups';\n import FavoritesPage from './pages/Favorites';\n import NewMeetupPage from './pages/NewMeetup';\n \n"
+                },
+                {
+                    "date": 1668674086413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,28 +1,5 @@\n-import {Route} from 'react-router-dom'\n-import AllMeetupsPage from './pages/AllMeetups';\n-import FavoritesPage from './pages/Favorites';\n-import NewMeetupPage from './pages/NewMeetup';\n-\n-function App() {\n-  return (\n-    <div>\n-      {/* After the domain name (localhost:3000/ or mydomain.com/), it's path */}\n-      <Route path='/'> {/* You should write routed pages with URL paths after the domain name */}\n-        <AllMeetupsPage />\n-      </Route> \n-\n-      <Route path='/new-meetup'>\n-        <NewMeetupPage/> \n-        {/* domain.com/new-meetup */}\n-      </Route>\n-\n-      <Route path='/favorites'>\n-        <FavoritesPage/>\n-        {/* domain.com/favorites */}\n-      </Route>\n-\n-    </div>\n-  );\n-}\n-\n-export default App;\n+function App(){\n+  return(\n+    <div>Hello!</div>\n+  )\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1668674175043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n function App(){\n   return(\n     <div>Hello!</div>\n   )\n-}\n\\ No newline at end of file\n+}\n+export default App;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1668674599185,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,15 @@\n-function App(){\n-  return(\n-    <div>Hello!</div>\n-  )\n+function App() {\n+  return (\n+    <div>\n+      <h1>My Todos</h1>\n+      <div>\n+        <h2>TITLE</h2>\n+        <div>\n+          <button>Delete</button>\n+        </div>\n+      </div>\n+    </div>\n+  );\n }\n+\n export default App;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1668674872663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,12 @@\n function App() {\n   return (\n     <div>\n       <h1>My Todos</h1>\n-      <div>\n+      <div className=\"card\">\n         <h2>TITLE</h2>\n-        <div>\n-          <button>Delete</button>\n+        <div className=\"action\">\n+          <button className=\"btn\">Delete</button>\n         </div>\n       </div>\n     </div>\n   );\n"
+                },
+                {
+                    "date": 1668675074722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,6 @@\n+import Todo from \"./components/Todo\";\n+\n function App() {\n   return (\n     <div>\n       <h1>My Todos</h1>\n"
+                },
+                {
+                    "date": 1668675251586,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,14 +3,9 @@\n function App() {\n   return (\n     <div>\n       <h1>My Todos</h1>\n-      <div className=\"card\">\n-        <h2>TITLE</h2>\n-        <div className=\"action\">\n-          <button className=\"btn\">Delete</button>\n-        </div>\n-      </div>\n+      <Todo />\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1668675435293,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,10 @@\n   return (\n     <div>\n       <h1>My Todos</h1>\n       <Todo />\n+      <Todo/>\n+      <Todo/>\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1668682994082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,11 @@\n function App() {\n   return (\n     <div>\n       <h1>My Todos</h1>\n-      <Todo />\n-      <Todo/>\n-      <Todo/>\n+      <Todo text=\"react classes\"/>\n+      <Todo text=\"master developer\"/>\n+      <Todo text=\"explore the course\"/>\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1668688839020,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,17 @@\n import Todo from \"./components/Todo\";\n+import Modal from \"./components/Modal\";\n+import Backdrop from \"./components/Backdrop\";\n \n function App() {\n   return (\n     <div>\n       <h1>My Todos</h1>\n       <Todo text=\"react classes\"/>\n       <Todo text=\"master developer\"/>\n       <Todo text=\"explore the course\"/>\n+      <Modal />\n+      <Backdrop />\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1668715964984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,10 +8,8 @@\n       <h1>My Todos</h1>\n       <Todo text=\"react classes\"/>\n       <Todo text=\"master developer\"/>\n       <Todo text=\"explore the course\"/>\n-      <Modal />\n-      <Backdrop />\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1668754875364,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,11 @@\n import Todo from \"./components/Todo\";\n-import Modal from \"./components/Modal\";\n-import Backdrop from \"./components/Backdrop\";\n \n function App() {\n   return (\n     <div>\n-      <h1>My Todos</h1>\n-      <Todo text=\"react classes\"/>\n+      <h1>My Cart</h1>\n+      <Todo text=\"Kitchen Island\"/>\n       <Todo text=\"master developer\"/>\n       <Todo text=\"explore the course\"/>\n     </div>\n   );\n"
+                },
+                {
+                    "date": 1668755114210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,11 @@\n function App() {\n   return (\n     <div>\n       <h1>My Cart</h1>\n-      <Todo text=\"Kitchen Island\"/>\n-      <Todo text=\"master developer\"/>\n-      <Todo text=\"explore the course\"/>\n+      <Todo text=\"Kitchen Island - $1.500\"/>\n+      <Todo text=\"Sideboard - $1.100\"/>\n+      <Todo text=\"Chair - $100\"/>\n     </div>\n   );\n }\n \n"
+                }
+            ],
+            "date": 1668603904122,
+            "name": "Commit-0",
+            "content": "function App() {\n  return (\n    <div>Hello</div>\n  );\n}\n\nexport default App;\n"
+        }
+    ]
+}

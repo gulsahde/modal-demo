@@ -1,0 +1,110 @@
+{
+    "sourceFile": "src/components/Todo.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 23,
+            "patches": [
+                {
+                    "date": 1668674450129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668675383046,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,12 @@\n function Todo(){\r\n     return(\r\n-        <div>Todo Section</div>\r\n+    <div className=\"card\">\r\n+        <h2>TITLE</h2>\r\n+        <div className=\"action\">\r\n+            <button className=\"btn\">Delete</button>\r\n+        </div>\r\n+    </div>\r\n     )\r\n }\r\n \r\n export default Todo;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1668675461599,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n function Todo(){\r\n     return(\r\n     <div className=\"card\">\r\n         <h2>TITLE</h2>\r\n-        <div className=\"action\">\r\n+        <div className=\"actions\">\r\n             <button className=\"btn\">Delete</button>\r\n         </div>\r\n     </div>\r\n     )\r\n"
+                },
+                {
+                    "date": 1668675485112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,8 +2,9 @@\n     return(\r\n     <div className=\"card\">\r\n         <h2>TITLE</h2>\r\n         <div className=\"actions\">\r\n+            <span>A span</span>\r\n             <button className=\"btn\">Delete</button>\r\n         </div>\r\n     </div>\r\n     )\r\n"
+                },
+                {
+                    "date": 1668685012171,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n-function Todo(){\r\n+function Todo(props){\r\n     return(\r\n     <div className=\"card\">\r\n-        <h2>TITLE</h2>\r\n+        <h2>{props.text}</h2>\r\n         <div className=\"actions\">\r\n             <span>A span</span>\r\n             <button className=\"btn\">Delete</button>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1668685032989,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function Todo(props){\r\n     return(\r\n     <div className=\"card\">\r\n-        <h2>{props.text}</h2>\r\n+        <h2>props.text</h2>\r\n         <div className=\"actions\">\r\n             <span>A span</span>\r\n             <button className=\"btn\">Delete</button>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1668685229101,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n function Todo(props){\r\n     return(\r\n     <div className=\"card\">\r\n-        <h2>props.text</h2>\r\n+        <h2>{props.text}</h2>\r\n         <div className=\"actions\">\r\n             <span>A span</span>\r\n             <button className=\"btn\">Delete</button>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1668686712389,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,15 @@\n function Todo(props){\r\n+    function deleteHandler(){\r\n+        console.log(\"clicked\");\r\n+        console.log(props.text);\r\n+    }\r\n     return(\r\n     <div className=\"card\">\r\n         <h2>{props.text}</h2>\r\n         <div className=\"actions\">\r\n             <span>A span</span>\r\n-            <button className=\"btn\">Delete</button>\r\n+            <button className=\"btn\" onClick={deleteHandler}>Delete</button>\r\n         </div>\r\n     </div>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1668715980835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,13 @@\n+import {useState} from 'react'\r\n+import Modal from './Modal';\r\n+import Backdrop from './Backdrop';\r\n+\r\n function Todo(props){\r\n+\r\n+    const[modalIsOpen, setModalIsOpen] = useState(false);\r\n     function deleteHandler(){\r\n-        console.log(\"clicked\");\r\n-        console.log(props.text);\r\n+        setModalIsOpen(true); //To change that modalIsOpen state from false\r\n     }\r\n     return(\r\n     <div className=\"card\">\r\n         <h2>{props.text}</h2>\r\n"
+                },
+                {
+                    "date": 1668716132011,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,10 @@\n         <div className=\"actions\">\r\n             <span>A span</span>\r\n             <button className=\"btn\" onClick={deleteHandler}>Delete</button>\r\n         </div>\r\n+        <Modal />\r\n+        <Backdrop />\r\n     </div>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1668716926142,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,10 +14,10 @@\n         <div className=\"actions\">\r\n             <span>A span</span>\r\n             <button className=\"btn\" onClick={deleteHandler}>Delete</button>\r\n         </div>\r\n-        <Modal />\r\n-        <Backdrop />\r\n+        {modalIsOpen ? <Modal /> : null}\r\n+        {modalIsOpen ? <Backdrop /> : null}\r\n     </div>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1668718134004,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,17 +7,20 @@\n     const[modalIsOpen, setModalIsOpen] = useState(false);\r\n     function deleteHandler(){\r\n         setModalIsOpen(true); //To change that modalIsOpen state from false\r\n     }\r\n+    function closeModalHandler(){\r\n+        setModalIsOpen(false);\r\n+    }\r\n     return(\r\n     <div className=\"card\">\r\n         <h2>{props.text}</h2>\r\n         <div className=\"actions\">\r\n             <span>A span</span>\r\n             <button className=\"btn\" onClick={deleteHandler}>Delete</button>\r\n         </div>\r\n         {modalIsOpen ? <Modal /> : null}\r\n-        {modalIsOpen ? <Backdrop /> : null}\r\n+        {modalIsOpen ? <Backdrop onClick={setModalIsOpen}/> : null}\r\n     </div>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1668718148001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n             <span>A span</span>\r\n             <button className=\"btn\" onClick={deleteHandler}>Delete</button>\r\n         </div>\r\n         {modalIsOpen ? <Modal /> : null}\r\n-        {modalIsOpen ? <Backdrop onClick={setModalIsOpen}/> : null}\r\n+        {modalIsOpen ? <Backdrop onClick={closeModalHandler}/> : null}\r\n     </div>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1668719241699,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n             <span>A span</span>\r\n             <button className=\"btn\" onClick={deleteHandler}>Delete</button>\r\n         </div>\r\n         {modalIsOpen ? <Modal /> : null}\r\n-        {modalIsOpen ? <Backdrop onClick={closeModalHandler}/> : null}\r\n+        {modalIsOpen ? <Backdrop onClose={closeModalHandler}/> : null}\r\n     </div>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1668719382709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n \r\n function Todo(props){\r\n \r\n     const[modalIsOpen, setModalIsOpen] = useState(false);\r\n+\r\n     function deleteHandler(){\r\n         setModalIsOpen(true); //To change that modalIsOpen state from false\r\n     }\r\n     function closeModalHandler(){\r\n@@ -18,9 +19,9 @@\n             <span>A span</span>\r\n             <button className=\"btn\" onClick={deleteHandler}>Delete</button>\r\n         </div>\r\n         {modalIsOpen ? <Modal /> : null}\r\n-        {modalIsOpen ? <Backdrop onClose={closeModalHandler}/> : null}\r\n+        {modalIsOpen ? <Backdrop onCancel={closeModalHandler}/> : null}\r\n     </div>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1668719606635,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n         <div className=\"actions\">\r\n             <span>A span</span>\r\n             <button className=\"btn\" onClick={deleteHandler}>Delete</button>\r\n         </div>\r\n-        {modalIsOpen ? <Modal /> : null}\r\n+        {modalIsOpen ? <Modal onCancel={closeModalHandler}/> : null}\r\n         {modalIsOpen ? <Backdrop onCancel={closeModalHandler}/> : null}\r\n     </div>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1668719857932,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n         <div className=\"actions\">\r\n             <span>A span</span>\r\n             <button className=\"btn\" onClick={deleteHandler}>Delete</button>\r\n         </div>\r\n-        {modalIsOpen ? <Modal onCancel={closeModalHandler}/> : null}\r\n+        {modalIsOpen ? <Modal onCancel={closeModalHandler} onConfirm={closeModalHandler}/> : null}\r\n         {modalIsOpen ? <Backdrop onCancel={closeModalHandler}/> : null}\r\n     </div>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1668755424659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     <div className=\"card\">\r\n         <h2>{props.text}</h2>\r\n         <div className=\"actions\">\r\n             <span>A span</span>\r\n-            <button className=\"btn\" onClick={deleteHandler}>Delete</button>\r\n+            <button className=\"btn\" onClick={deleteHandler}>Checkout</button>\r\n         </div>\r\n         {modalIsOpen ? <Modal onCancel={closeModalHandler} onConfirm={closeModalHandler}/> : null}\r\n         {modalIsOpen ? <Backdrop onCancel={closeModalHandler}/> : null}\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1668755474529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     return(\r\n     <div className=\"card\">\r\n         <h2>{props.text}</h2>\r\n         <div className=\"actions\">\r\n-            <span>A span</span>\r\n+            <span>Remove</span>\r\n             <button className=\"btn\" onClick={deleteHandler}>Checkout</button>\r\n         </div>\r\n         {modalIsOpen ? <Modal onCancel={closeModalHandler} onConfirm={closeModalHandler}/> : null}\r\n         {modalIsOpen ? <Backdrop onCancel={closeModalHandler}/> : null}\r\n"
+                },
+                {
+                    "date": 1668755508525,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,10 +15,10 @@\n     return(\r\n     <div className=\"card\">\r\n         <h2>{props.text}</h2>\r\n         <div className=\"actions\">\r\n-            <span>Remove</span>\r\n-            <button className=\"btn\" onClick={deleteHandler}>Checkout</button>\r\n+            <span>Checkout</span>\r\n+            <button className=\"btn\" onClick={deleteHandler}>Remove</button>\r\n         </div>\r\n         {modalIsOpen ? <Modal onCancel={closeModalHandler} onConfirm={closeModalHandler}/> : null}\r\n         {modalIsOpen ? <Backdrop onCancel={closeModalHandler}/> : null}\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1668755529675,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     return(\r\n     <div className=\"card\">\r\n         <h2>{props.text}</h2>\r\n         <div className=\"actions\">\r\n-            <span>Checkout</span>\r\n+            <button>Checkout</button>\r\n             <button className=\"btn\" onClick={deleteHandler}>Remove</button>\r\n         </div>\r\n         {modalIsOpen ? <Modal onCancel={closeModalHandler} onConfirm={closeModalHandler}/> : null}\r\n         {modalIsOpen ? <Backdrop onCancel={closeModalHandler}/> : null}\r\n"
+                },
+                {
+                    "date": 1668755555117,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,10 +15,10 @@\n     return(\r\n     <div className=\"card\">\r\n         <h2>{props.text}</h2>\r\n         <div className=\"actions\">\r\n-            <button>Checkout</button>\r\n-            <button className=\"btn\" onClick={deleteHandler}>Remove</button>\r\n+            <button className='btn'>Checkout</button>\r\n+            <button className=\"btn btn--alt\" onClick={deleteHandler}>Remove</button>\r\n         </div>\r\n         {modalIsOpen ? <Modal onCancel={closeModalHandler} onConfirm={closeModalHandler}/> : null}\r\n         {modalIsOpen ? <Backdrop onCancel={closeModalHandler}/> : null}\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1668755610017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n     return(\r\n     <div className=\"card\">\r\n         <h2>{props.text}</h2>\r\n         <div className=\"actions\">\r\n-            <button className='btn'>Checkout</button>\r\n+            <span>Checkout</span>\r\n             <button className=\"btn btn--alt\" onClick={deleteHandler}>Remove</button>\r\n         </div>\r\n         {modalIsOpen ? <Modal onCancel={closeModalHandler} onConfirm={closeModalHandler}/> : null}\r\n         {modalIsOpen ? <Backdrop onCancel={closeModalHandler}/> : null}\r\n"
+                },
+                {
+                    "date": 1668755714785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     <div className=\"card\">\r\n         <h2>{props.text}</h2>\r\n         <div className=\"actions\">\r\n             <span>Checkout</span>\r\n-            <button className=\"btn btn--alt\" onClick={deleteHandler}>Remove</button>\r\n+            <button className=\"btn\" onClick={deleteHandler}>Remove</button>\r\n         </div>\r\n         {modalIsOpen ? <Modal onCancel={closeModalHandler} onConfirm={closeModalHandler}/> : null}\r\n         {modalIsOpen ? <Backdrop onCancel={closeModalHandler}/> : null}\r\n     </div>\r\n"
+                }
+            ],
+            "date": 1668674450129,
+            "name": "Commit-0",
+            "content": "function Todo(){\r\n    return(\r\n        <div>Todo Section</div>\r\n    )\r\n}\r\n\r\nexport default Todo;"
+        }
+    ]
+}
