@@ -1,0 +1,118 @@
+{
+    "sourceFile": "src/pages/AllEvents.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 25,
+            "patches": [
+                {
+                    "date": 1668764564751,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668764623220,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function AllEventsPage(){\r\n     return(\r\n-        <div></div>\r\n+        <div>All Events Page!</div>\r\n     )\r\n }\r\n \r\n export default AllEventsPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1668779838672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,27 @@\n+const DUMMY_DATA = [\r\n+    {\r\n+      id: 'm1',\r\n+      title: 'Venice Winter Fest',\r\n+      image:\r\n+        // 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/2560px-Stadtbild_M%C3%BCnchen.jpg',\r\n+        'https://images.unsplash.com/photo-1583307813854-7c6467413b38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',\r\n+      location: '12257 Venice Blvd. 12257 Venice Boulevard Los Angeles, CA 90066 United States',\r\n+      description:\r\n+        'The Holiday Season is approaching ❄️\r\n+        Santa, shop locally made brands & artists for your Holiday gifts, art, music, food trucks, beer gardens, vintage car show & so much more!',\r\n+    },\r\n+    {\r\n+      id: 'm2',\r\n+      title: 'This is a second meetup',\r\n+      image:\r\n+        'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/2560px-Stadtbild_M%C3%BCnchen.jpg',\r\n+      address: 'Meetupstreet 5, 12345 Meetup City',\r\n+      description:\r\n+        'This is a first, amazing meetup which you definitely should not miss. It will be a lot of fun!',\r\n+    },\r\n+];\r\n+\r\n function AllEventsPage(){\r\n     return(\r\n         <div>All Events Page!</div>\r\n     )\r\n"
+                },
+                {
+                    "date": 1668780222763,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,19 +6,18 @@\n         // 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/2560px-Stadtbild_M%C3%BCnchen.jpg',\r\n         'https://images.unsplash.com/photo-1583307813854-7c6467413b38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',\r\n       location: '12257 Venice Blvd. 12257 Venice Boulevard Los Angeles, CA 90066 United States',\r\n       description:\r\n-        'The Holiday Season is approaching ❄️\r\n-        Santa, shop locally made brands & artists for your Holiday gifts, art, music, food trucks, beer gardens, vintage car show & so much more!',\r\n+        'The Holiday Season is approaching ❄️ \\n Santa, shop locally made brands & artists for your Holiday gifts, art, music, food trucks, beer gardens, vintage car show & so much more!',\r\n     },\r\n     {\r\n       id: 'm2',\r\n-      title: 'This is a second meetup',\r\n+      title: 'LA Career Fair: Exclusive Tech Hiring Event',\r\n       image:\r\n-        'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/2560px-Stadtbild_M%C3%BCnchen.jpg',\r\n-      address: 'Meetupstreet 5, 12345 Meetup City',\r\n+        'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1184&q=80',\r\n+      location: 'Moved to Virtual Event Online Los Angeles, CA 90012 United States',\r\n       description:\r\n-        'This is a first, amazing meetup which you definitely should not miss. It will be a lot of fun!',\r\n+        'Tech Career Fair focus on helping companies achieve their diversity and inclusivity initiative with more diverse non-traditional candidates.',\r\n     },\r\n ];\r\n \r\n function AllEventsPage(){\r\n"
+                },
+                {
+                    "date": 1668780230729,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,8 @@\n     {\r\n       id: 'm1',\r\n       title: 'Venice Winter Fest',\r\n       image:\r\n-        // 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/2560px-Stadtbild_M%C3%BCnchen.jpg',\r\n         'https://images.unsplash.com/photo-1583307813854-7c6467413b38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',\r\n       location: '12257 Venice Blvd. 12257 Venice Boulevard Los Angeles, CA 90066 United States',\r\n       description:\r\n         'The Holiday Season is approaching ❄️ \\n Santa, shop locally made brands & artists for your Holiday gifts, art, music, food trucks, beer gardens, vintage car show & so much more!',\r\n"
+                },
+                {
+                    "date": 1668780588313,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,11 +18,17 @@\n         'Tech Career Fair focus on helping companies achieve their diversity and inclusivity initiative with more diverse non-traditional candidates.',\r\n     },\r\n ];\r\n \r\n+/* And for this, we now need to learn how we can render a list of JSX elements, dynamically, and \r\n+how we can translate a list of data (DUMMY_DATA) into a list of JSX elements.*/\r\n function AllEventsPage(){\r\n     return(\r\n-        <div>All Events Page!</div>\r\n+       <section>\r\n+        <h1>All Events</h1>\r\n+        {/* You can actually render an array JSX elements like this: */}\r\n+        {[<li>Event 1</li>, <li>Event 2</li>]}\r\n+       </section>\r\n     )\r\n }\r\n \r\n export default AllEventsPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1668781165225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,10 +24,19 @@\n function AllEventsPage(){\r\n     return(\r\n        <section>\r\n         <h1>All Events</h1>\r\n+\r\n         {/* You can actually render an array JSX elements like this: */}\r\n-        {[<li>Event 1</li>, <li>Event 2</li>]}\r\n+        {/* ------------------------------------------------------------ */}\r\n+        {/* And there is a way for translating an array into an array of different data in JavaScript. \r\n+        On that dummy data array, we can call the built-in map() method, which exists in JavaScript. */}\r\n+        <ul>\r\n+            {DUMMY_DATA.map((events)=>{\r\n+                return <li>{events.title}</li>\r\n+            })}\r\n+        </ul>\r\n+        \r\n        </section>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1668782762813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,14 +26,11 @@\n        <section>\r\n         <h1>All Events</h1>\r\n \r\n         {/* You can actually render an array JSX elements like this: */}\r\n-        {/* ------------------------------------------------------------ */}\r\n-        {/* And there is a way for translating an array into an array of different data in JavaScript. \r\n-        On that dummy data array, we can call the built-in map() method, which exists in JavaScript. */}\r\n         <ul>\r\n             {DUMMY_DATA.map((events)=>{\r\n-                return <li>{events.title}</li>\r\n+                return <li key={events.id}>{events.title}</li>\r\n             })}\r\n         </ul>\r\n         \r\n        </section>\r\n"
+                },
+                {
+                    "date": 1668934895928,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,16 +24,8 @@\n function AllEventsPage(){\r\n     return(\r\n        <section>\r\n         <h1>All Events</h1>\r\n-\r\n-        {/* You can actually render an array JSX elements like this: */}\r\n-        <ul>\r\n-            {DUMMY_DATA.map((events)=>{\r\n-                return <li key={events.id}>{events.title}</li>\r\n-            })}\r\n-        </ul>\r\n-        \r\n        </section>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1668934943006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import EventList from \"../components/events/EventList\";\r\n const DUMMY_DATA = [\r\n     {\r\n       id: 'm1',\r\n       title: 'Venice Winter Fest',\r\n@@ -24,8 +25,9 @@\n function AllEventsPage(){\r\n     return(\r\n        <section>\r\n         <h1>All Events</h1>\r\n+        <EventList events/>\r\n        </section>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1668934971176,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,10 @@\n function AllEventsPage(){\r\n     return(\r\n        <section>\r\n         <h1>All Events</h1>\r\n-        <EventList events/>\r\n+        <EventList events/> \r\n+        {/* events = props.events.map()... in EventList.js */}\r\n        </section>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1668934999491,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,9 @@\n function AllEventsPage(){\r\n     return(\r\n        <section>\r\n         <h1>All Events</h1>\r\n-        <EventList events/> \r\n+        <EventList events={DUMMY_DATA}/> \r\n         {/* events = props.events.map()... in EventList.js */}\r\n        </section>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1668937118287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,5 @@\n+import EventItem from \"../components/events/EventItem\";\r\n import EventList from \"../components/events/EventList\";\r\n const DUMMY_DATA = [\r\n     {\r\n       id: 'm1',\r\n"
+                },
+                {
+                    "date": 1669060495005,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,4 @@\n-import EventItem from \"../components/events/EventItem\";\r\n import EventList from \"../components/events/EventList\";\r\n const DUMMY_DATA = [\r\n     {\r\n       id: 'm1',\r\n"
+                },
+                {
+                    "date": 1669199975445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n import EventList from \"../components/events/EventList\";\r\n+import { useState } from \"react\";\r\n const DUMMY_DATA = [\r\n     {\r\n       id: 'm1',\r\n       title: 'Venice Winter Fest',\r\n@@ -22,8 +23,17 @@\n \r\n /* And for this, we now need to learn how we can render a list of JSX elements, dynamically, and \r\n how we can translate a list of data (DUMMY_DATA) into a list of JSX elements.*/\r\n function AllEventsPage(){\r\n+\r\n+const [isLoading, setIsLoading] = useState(false);\r\n+\r\n+  fetch('https://event-website-project-ee45b-default-rtdb.firebaseio.com/events.json'\r\n+  ).then(response => {\r\n+    return response.json();\r\n+  }).then(data =>{\r\n+\r\n+  });\r\n     return(\r\n        <section>\r\n         <h1>All Events</h1>\r\n         <EventList events={DUMMY_DATA}/> \r\n"
+                },
+                {
+                    "date": 1669200005784,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n   fetch('https://event-website-project-ee45b-default-rtdb.firebaseio.com/events.json'\r\n   ).then(response => {\r\n     return response.json();\r\n   }).then(data =>{\r\n-\r\n+    setIsLoading(true);\r\n   });\r\n     return(\r\n        <section>\r\n         <h1>All Events</h1>\r\n"
+                },
+                {
+                    "date": 1669200036041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,15 +24,15 @@\n /* And for this, we now need to learn how we can render a list of JSX elements, dynamically, and \r\n how we can translate a list of data (DUMMY_DATA) into a list of JSX elements.*/\r\n function AllEventsPage(){\r\n \r\n-const [isLoading, setIsLoading] = useState(false);\r\n+const [isLoading, setIsLoading] = useState(true);\r\n \r\n   fetch('https://event-website-project-ee45b-default-rtdb.firebaseio.com/events.json'\r\n   ).then(response => {\r\n     return response.json();\r\n   }).then(data =>{\r\n-    setIsLoading(true);\r\n+    setIsLoading(false);\r\n   });\r\n     return(\r\n        <section>\r\n         <h1>All Events</h1>\r\n"
+                },
+                {
+                    "date": 1669200640371,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,17 @@\n     return response.json();\r\n   }).then(data =>{\r\n     setIsLoading(false);\r\n   });\r\n+\r\n+  if(isLoading){\r\n     return(\r\n+      <section>\r\n+        <p>Loading...</p>\r\n+      </section>\r\n+    )\r\n+  }\r\n+    return(\r\n        <section>\r\n         <h1>All Events</h1>\r\n         <EventList events={DUMMY_DATA}/> \r\n         {/* events = props.events.map()... in EventList.js */}\r\n"
+                },
+                {
+                    "date": 1669201131875,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,14 +25,16 @@\n how we can translate a list of data (DUMMY_DATA) into a list of JSX elements.*/\r\n function AllEventsPage(){\r\n \r\n const [isLoading, setIsLoading] = useState(true);\r\n+const [loadedEvents, setLoadingEvents] = useState([]); //empty array, because later, we fill the data here with fetched data from Firebase\r\n \r\n   fetch('https://event-website-project-ee45b-default-rtdb.firebaseio.com/events.json'\r\n   ).then(response => {\r\n     return response.json();\r\n   }).then(data =>{\r\n     setIsLoading(false);\r\n+    setLoadingEvents(data)\r\n   });\r\n \r\n   if(isLoading){\r\n     return(\r\n@@ -43,10 +45,9 @@\n   }\r\n     return(\r\n        <section>\r\n         <h1>All Events</h1>\r\n-        <EventList events={DUMMY_DATA}/> \r\n-        {/* events = props.events.map()... in EventList.js */}\r\n+        <EventList events={loadedEvents}/> \r\n        </section>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1669201414451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,33 +1,11 @@\n import EventList from \"../components/events/EventList\";\r\n import { useState } from \"react\";\r\n-const DUMMY_DATA = [\r\n-    {\r\n-      id: 'm1',\r\n-      title: 'Venice Winter Fest',\r\n-      image:\r\n-        'https://images.unsplash.com/photo-1583307813854-7c6467413b38?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80',\r\n-      location: '12257 Venice Blvd. 12257 Venice Boulevard Los Angeles, CA 90066 United States',\r\n-      description:\r\n-        'The Holiday Season is approaching ❄️ \\n Santa, shop locally made brands & artists for your Holiday gifts, art, music, food trucks, beer gardens, vintage car show & so much more!',\r\n-    },\r\n-    {\r\n-      id: 'm2',\r\n-      title: 'LA Career Fair: Exclusive Tech Hiring Event',\r\n-      image:\r\n-        'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1184&q=80',\r\n-      location: 'Moved to Virtual Event Online Los Angeles, CA 90012 United States',\r\n-      description:\r\n-        'Tech Career Fair focus on helping companies achieve their diversity and inclusivity initiative with more diverse non-traditional candidates.',\r\n-    },\r\n-];\r\n \r\n-/* And for this, we now need to learn how we can render a list of JSX elements, dynamically, and \r\n-how we can translate a list of data (DUMMY_DATA) into a list of JSX elements.*/\r\n function AllEventsPage(){\r\n \r\n const [isLoading, setIsLoading] = useState(true);\r\n-const [loadedEvents, setLoadingEvents] = useState([]); //empty array, because later, we fill the data here with fetched data from Firebase\r\n+const [loadedEvents, setLoadingEvents] = useState([]); //empty array because later we will fill it with data fetched from Firebase and converted to JSON datatype\r\n \r\n   fetch('https://event-website-project-ee45b-default-rtdb.firebaseio.com/events.json'\r\n   ).then(response => {\r\n     return response.json();\r\n"
+                },
+                {
+                    "date": 1669203738839,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,32 +1,35 @@\n import EventList from \"../components/events/EventList\";\r\n-import { useState } from \"react\";\r\n+import { useEffect, useState } from \"react\";\r\n \r\n function AllEventsPage(){\r\n \r\n-const [isLoading, setIsLoading] = useState(true);\r\n-const [loadedEvents, setLoadingEvents] = useState([]); //empty array because later we will fill it with data fetched from Firebase and converted to JSON datatype\r\n+  const [isLoading, setIsLoading] = useState(true);\r\n+  const [loadedEvents, setLoadingEvents] = useState([]); //empty array because later we will fill it with data fetched from Firebase and converted to JSON datatype\r\n+  \r\n+  \r\n+  useEffect(() => {\r\n+    fetch('https://event-website-project-ee45b-default-rtdb.firebaseio.com/events.json'\r\n+    ).then(response => {\r\n+      return response.json();\r\n+    }).then(data =>{\r\n+      setIsLoading(false);\r\n+      setLoadingEvents(data);\r\n+    });\r\n+  }, []);\r\n \r\n-  fetch('https://event-website-project-ee45b-default-rtdb.firebaseio.com/events.json'\r\n-  ).then(response => {\r\n-    return response.json();\r\n-  }).then(data =>{\r\n-    setIsLoading(false);\r\n-    setLoadingEvents(data)\r\n-  });\r\n-\r\n   if(isLoading){\r\n     return(\r\n       <section>\r\n         <p>Loading...</p>\r\n       </section>\r\n     )\r\n   }\r\n     return(\r\n-       <section>\r\n+        <section>\r\n         <h1>All Events</h1>\r\n         <EventList events={loadedEvents}/> \r\n-       </section>\r\n+        </section>\r\n     )\r\n }\r\n \r\n export default AllEventsPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669207603843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,18 +3,20 @@\n \r\n function AllEventsPage(){\r\n \r\n   const [isLoading, setIsLoading] = useState(true);\r\n-  const [loadedEvents, setLoadingEvents] = useState([]); //empty array because later we will fill it with data fetched from Firebase and converted to JSON datatype\r\n+  const [loadedEvents, setLoadedEvents] = useState([]); //empty array because later we will fill it with data fetched from Firebase and converted to JSON datatype\r\n   \r\n   \r\n   useEffect(() => {\r\n+    setIsLoading(true);\r\n+    \r\n     fetch('https://event-website-project-ee45b-default-rtdb.firebaseio.com/events.json'\r\n     ).then(response => {\r\n       return response.json();\r\n     }).then(data =>{\r\n       setIsLoading(false);\r\n-      setLoadingEvents(data);\r\n+      setLoadedEvents(data);\r\n     });\r\n   }, []);\r\n \r\n   if(isLoading){\r\n"
+                },
+                {
+                    "date": 1669209016768,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,15 +8,24 @@\n   \r\n   \r\n   useEffect(() => {\r\n     setIsLoading(true);\r\n-    \r\n+\r\n     fetch('https://event-website-project-ee45b-default-rtdb.firebaseio.com/events.json'\r\n     ).then(response => {\r\n       return response.json();\r\n     }).then(data =>{\r\n+\r\n+      const events = [];\r\n+      for(const key in data){\r\n+        const event = { //this is for every event\r\n+          id:key,\r\n+          ...data[key]\r\n+        };\r\n+        events.push(event);\r\n+      }\r\n       setIsLoading(false);\r\n-      setLoadedEvents(data);\r\n+      setLoadedEvents(events);\r\n     });\r\n   }, []);\r\n \r\n   if(isLoading){\r\n"
+                },
+                {
+                    "date": 1669814112429,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n \r\n       const events = [];\r\n       for(const key in data){\r\n         const event = { //this is for every event\r\n-          id:key,\r\n+          event.id:key,\r\n           ...data[key]\r\n         };\r\n         events.push(event);\r\n       }\r\n"
+                },
+                {
+                    "date": 1669814341622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n \r\n       const events = [];\r\n       for(const key in data){\r\n         const event = { //this is for every event\r\n-          event.id:key,\r\n+          id:key,\r\n           ...data[key]\r\n         };\r\n         events.push(event);\r\n       }\r\n"
+                },
+                {
+                    "date": 1670331752094,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n function AllEventsPage(){\r\n \r\n   const [isLoading, setIsLoading] = useState(true);\r\n-  const [loadedEvents, setLoadedEvents] = useState([]); //empty array because later we will fill it with data fetched from Firebase and converted to JSON datatype\r\n+  const [loadedEvents, setLoadedEvents] = useState([]);\r\n   \r\n   \r\n   useEffect(() => {\r\n     setIsLoading(true);\r\n@@ -16,9 +16,9 @@\n     }).then(data =>{\r\n \r\n       const events = [];\r\n       for(const key in data){\r\n-        const event = { //this is for every event\r\n+        const event = { \r\n           id:key,\r\n           ...data[key]\r\n         };\r\n         events.push(event);\r\n"
+                }
+            ],
+            "date": 1668764564751,
+            "name": "Commit-0",
+            "content": "function AllEventsPage(){\r\n    return(\r\n        <div></div>\r\n    )\r\n}\r\n\r\nexport default AllEventsPage;"
+        }
+    ]
+}

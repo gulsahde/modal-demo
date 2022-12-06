@@ -1,0 +1,58 @@
+{
+    "sourceFile": "src/components/events/NewEventForm.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 10,
+            "patches": [
+                {
+                    "date": 1669028235832,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1669028285455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,13 @@\n import Card from '../ui/Card'\r\n+import classes from './NewEventForm.module.css'\r\n \r\n function NewEventForm(){\r\n     return(\r\n         <Card>\r\n+            <form  className={classes.form}>\r\n \r\n+            </form>\r\n         </Card>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1669030970435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,30 @@\n \r\n function NewEventForm(){\r\n     return(\r\n         <Card>\r\n-            <form  className={classes.form}>\r\n-\r\n+            <form className={classes.form}>\r\n+                {/* title */}\r\n+                <div className={classes.control}>\r\n+                    <label htmlFor=\"title\">Event Title</label>\r\n+                    <input type=\"text\" required id=\"title\"/>\r\n+                </div>\r\n+                {/* image */}\r\n+                <div className={classes.control}>\r\n+                    <label htmlFor=\"image\">Image</label>\r\n+                    <input type=\"url\" required id=\"image\"/> \r\n+                </div>\r\n+                {/* location */}\r\n+                <div className={classes.control}>\r\n+                    <label htmlFor=\"location\">Location</label>\r\n+                    <input type=\"url\" required id=\"location\"/> \r\n+                </div>\r\n+                {/* description */}\r\n+                <div className={classes.control}>\r\n+                    <label htmlFor=\"description\">Description</label>\r\n+                    <textarea id=\"description\" required row=\"5\"></textarea>\r\n+                </div>\r\n+                \r\n             </form>\r\n         </Card>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1669054212540,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,10 @@\n                 <div className={classes.control}>\r\n                     <label htmlFor=\"description\">Description</label>\r\n                     <textarea id=\"description\" required row=\"5\"></textarea>\r\n                 </div>\r\n-                \r\n+                <div className={classes.action}></div>\r\n+                <button>Add Event</button>\r\n             </form>\r\n         </Card>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1669054797139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,10 +24,11 @@\n                 <div className={classes.control}>\r\n                     <label htmlFor=\"description\">Description</label>\r\n                     <textarea id=\"description\" required row=\"5\"></textarea>\r\n                 </div>\r\n-                <div className={classes.action}></div>\r\n-                <button>Add Event</button>\r\n+                <div className={classes.actions}>\r\n+                    <button>Add Event</button>\r\n+                </div>\r\n             </form>\r\n         </Card>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1669059664089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,30 +1,41 @@\n import Card from '../ui/Card'\r\n import classes from './NewEventForm.module.css'\r\n+import {useRef} from 'react'\r\n \r\n function NewEventForm(){\r\n+    const titleInputRef=useRef();\r\n+    const imageInputRef=useRef();\r\n+    const locationInputRef=useRef();\r\n+    const descriptionInputRef=useRef();\r\n+\r\n+    function submitHandler(event){\r\n+        event.preventDefault(); //send that request behind the scenes without reloading\r\n+\r\n+        const enteredTitle=titleInputRef.current.value;\r\n+    }\r\n     return(\r\n         <Card>\r\n-            <form className={classes.form}>\r\n+            <form className={classes.form} onSubmit={submitHandler}>\r\n                 {/* title */}\r\n                 <div className={classes.control}>\r\n                     <label htmlFor=\"title\">Event Title</label>\r\n-                    <input type=\"text\" required id=\"title\"/>\r\n+                    <input type=\"text\" required id=\"title\" ref={titleInputRef}/>\r\n                 </div>\r\n                 {/* image */}\r\n                 <div className={classes.control}>\r\n                     <label htmlFor=\"image\">Image</label>\r\n-                    <input type=\"url\" required id=\"image\"/> \r\n+                    <input type=\"url\" required id=\"image\" ref={imageInputRef}/> \r\n                 </div>\r\n                 {/* location */}\r\n                 <div className={classes.control}>\r\n                     <label htmlFor=\"location\">Location</label>\r\n-                    <input type=\"url\" required id=\"location\"/> \r\n+                    <input type=\"url\" required id=\"location\" ref={locationInputRef}/> \r\n                 </div>\r\n                 {/* description */}\r\n                 <div className={classes.control}>\r\n                     <label htmlFor=\"description\">Description</label>\r\n-                    <textarea id=\"description\" required row=\"5\"></textarea>\r\n+                    <textarea id=\"description\" required row=\"5\" ref={descriptionInputRef}></textarea>\r\n                 </div>\r\n                 <div className={classes.actions}>\r\n                     <button>Add Event</button>\r\n                 </div>\r\n"
+                },
+                {
+                    "date": 1669059697799,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,9 +33,13 @@\n                 </div>\r\n                 {/* description */}\r\n                 <div className={classes.control}>\r\n                     <label htmlFor=\"description\">Description</label>\r\n-                    <textarea id=\"description\" required row=\"5\" ref={descriptionInputRef}></textarea>\r\n+                    <textarea \r\n+                    id=\"description\" \r\n+                    required \r\n+                    row=\"5\" \r\n+                    ref={descriptionInputRef}></textarea>\r\n                 </div>\r\n                 <div className={classes.actions}>\r\n                     <button>Add Event</button>\r\n                 </div>\r\n"
+                },
+                {
+                    "date": 1669060268682,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,20 @@\n     function submitHandler(event){\r\n         event.preventDefault(); //send that request behind the scenes without reloading\r\n \r\n         const enteredTitle=titleInputRef.current.value;\r\n+        const enteredImage=imageInputRef.current.value;\r\n+        const enteredLocation=locationInputRef.current.value;\r\n+        const enteredDescription=descriptionInputRef.current.value;\r\n+\r\n+        const eventData={\r\n+            title: enteredTitle,\r\n+            image: enteredImage,\r\n+            location: enteredLocation,\r\n+            description: enteredDescription,\r\n+        };\r\n+\r\n+        console.log(eventData);\r\n     }\r\n     return(\r\n         <Card>\r\n             <form className={classes.form} onSubmit={submitHandler}>\r\n"
+                },
+                {
+                    "date": 1669060428854,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n                 </div>\r\n                 {/* location */}\r\n                 <div className={classes.control}>\r\n                     <label htmlFor=\"location\">Location</label>\r\n-                    <input type=\"url\" required id=\"location\" ref={locationInputRef}/> \r\n+                    <input type=\"text\" required id=\"location\" ref={locationInputRef}/> \r\n                 </div>\r\n                 {/* description */}\r\n                 <div className={classes.control}>\r\n                     <label htmlFor=\"description\">Description</label>\r\n"
+                },
+                {
+                    "date": 1669118609029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import Card from '../ui/Card'\r\n import classes from './NewEventForm.module.css'\r\n import {useRef} from 'react'\r\n \r\n-function NewEventForm(){\r\n+function NewEventForm(props){\r\n     const titleInputRef=useRef();\r\n     const imageInputRef=useRef();\r\n     const locationInputRef=useRef();\r\n     const descriptionInputRef=useRef();\r\n@@ -22,9 +22,9 @@\n             location: enteredLocation,\r\n             description: enteredDescription,\r\n         };\r\n \r\n-        console.log(eventData);\r\n+        props.onAddEvent(eventData);\r\n     }\r\n     return(\r\n         <Card>\r\n             <form className={classes.form} onSubmit={submitHandler}>\r\n"
+                },
+                {
+                    "date": 1670332073955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n     const locationInputRef=useRef();\r\n     const descriptionInputRef=useRef();\r\n \r\n     function submitHandler(event){\r\n-        event.preventDefault(); //send that request behind the scenes without reloading\r\n+        event.preventDefault();\r\n \r\n         const enteredTitle=titleInputRef.current.value;\r\n         const enteredImage=imageInputRef.current.value;\r\n         const enteredLocation=locationInputRef.current.value;\r\n"
+                }
+            ],
+            "date": 1669028235832,
+            "name": "Commit-0",
+            "content": "import Card from '../ui/Card'\r\n\r\nfunction NewEventForm(){\r\n    return(\r\n        <Card>\r\n\r\n        </Card>\r\n    )\r\n}\r\n\r\nexport default NewEventForm;"
+        }
+    ]
+}

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 25,
+            "activePatchIndex": 38,
             "patches": [
                 {
                     "date": 1668603904122,
@@ -108,6 +108,58 @@
                 {
                     "date": 1668755114210,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,11 @@\n function App() {\n   return (\n     <div>\n       <h1>My Cart</h1>\n-      <Todo text=\"Kitchen Island\"/>\n-      <Todo text=\"master developer\"/>\n-      <Todo text=\"explore the course\"/>\n+      <Todo text=\"Kitchen Island - $1.500\"/>\n+      <Todo text=\"Sideboard - $1.100\"/>\n+      <Todo text=\"Chair - $100\"/>\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1668761834418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,7 @@\n-import Todo from \"./components/Todo\";\n-\n function App() {\n   return (\n     <div>\n-      <h1>My Cart</h1>\n-      <Todo text=\"Kitchen Island - $1.500\"/>\n-      <Todo text=\"Sideboard - $1.100\"/>\n-      <Todo text=\"Chair - $100\"/>\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1668761897847,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,13 @@\n+import Todo from \"./components/Todo\";\n+\n function App() {\n   return (\n     <div>\n+      <h1>My Cart</h1>\n+      <Todo text=\"Kitchen Island - $1.500\"/>\n+      <Todo text=\"Sideboard - $1.100\"/>\n+      <Todo text=\"Chair - $100\"/>\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1668762179553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,8 @@\n \n function App() {\n   return (\n     <div>\n-      <h1>My Cart</h1>\n-      <Todo text=\"Kitchen Island - $1.500\"/>\n-      <Todo text=\"Sideboard - $1.100\"/>\n-      <Todo text=\"Chair - $100\"/>\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1668764809580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import Todo from \"./components/Todo\";\n+import { Route } from 'react-router-dom'\n \n function App() {\n   return (\n     <div>\n"
+                },
+                {
+                    "date": 1668764852555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,10 @@\n-import { Route } from 'react-router-dom'\n+import { Route } from 'react-router-dom';\n \n+import AllEventsPage from './pages/AllEvents';\n+import FavoritesPage from './pages/Favorites';\n+import NewEventsPage from './pages/NewEvents';\n+\n function App() {\n   return (\n     <div>\n     </div>\n"
+                },
+                {
+                    "date": 1668764907993,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,11 @@\n \n function App() {\n   return (\n     <div>\n+      <Route path=\"/\">\n+        <AllEventsPage/>\n+      </Route>\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1668764962914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,22 @@\n import { Route } from 'react-router-dom';\n \n import AllEventsPage from './pages/AllEvents';\n import FavoritesPage from './pages/Favorites';\n-import NewEventsPage from './pages/NewEvents';\n+import NewEventPage from './pages/NewEvent';\n \n function App() {\n   return (\n     <div>\n       <Route path=\"/\">\n         <AllEventsPage/>\n       </Route>\n+      <Route path=\"/favorites\">\n+        <FavoritesPage/>\n+      </Route>\n+      <Route path=\"/new-event\">\n+        <NewEventPage/>\n+      </Route>\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1668765340647,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,19 +4,17 @@\n import FavoritesPage from './pages/Favorites';\n import NewEventPage from './pages/NewEvent';\n \n function App() {\n+  //localhost:3000/\n+  //my-page.com/\n+\n   return (\n     <div>\n-      <Route path=\"/\">\n-        <AllEventsPage/>\n-      </Route>\n-      <Route path=\"/favorites\">\n-        <FavoritesPage/>\n-      </Route>\n-      <Route path=\"/new-event\">\n-        <NewEventPage/>\n-      </Route>\n+      <Route path=\"/\" element={<AllEventsPage />} />\n+        \n+      <Route path=\"/favorites\" element={<FavoritesPage />} />\n+      <Route path=\"/new-event\" element={<NewEventPage />} />\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1668765505131,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { Route } from 'react-router-dom';\n+import { Routes, Route } from 'react-router-dom';\n \n import AllEventsPage from './pages/AllEvents';\n import FavoritesPage from './pages/Favorites';\n import NewEventPage from './pages/NewEvent';\n@@ -9,12 +9,13 @@\n   //my-page.com/\n \n   return (\n     <div>\n-      <Route path=\"/\" element={<AllEventsPage />} />\n-        \n-      <Route path=\"/favorites\" element={<FavoritesPage />} />\n-      <Route path=\"/new-event\" element={<NewEventPage />} />\n+      <Routes>\n+        <Route path=\"/\" element={<AllEventsPage />} />\n+        <Route path=\"/favorites\" element={<FavoritesPage />} />\n+        <Route path=\"/new-event\" element={<NewEventPage />} />\n+        </Routes>\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1668775586859,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,21 +1,23 @@\n-import { Routes, Route } from 'react-router-dom';\n+import { Routes, Route } from 'react-router-dom'; //Rote v6.4.3\n \n import AllEventsPage from './pages/AllEvents';\n import FavoritesPage from './pages/Favorites';\n import NewEventPage from './pages/NewEvent';\n+import MainNav from './components/layout/MainNav';\n \n function App() {\n   //localhost:3000/\n   //my-page.com/\n \n   return (\n     <div>\n+      <MainNav/>\n       <Routes>\n         <Route path=\"/\" element={<AllEventsPage />} />\n         <Route path=\"/favorites\" element={<FavoritesPage />} />\n         <Route path=\"/new-event\" element={<NewEventPage />} />\n-        </Routes>\n+      </Routes>\n     </div>\n   );\n }\n \n"
+                },
+                {
+                    "date": 1669022995829,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,8 @@\n   //my-page.com/\n \n   return (\n     <div>\n-      <MainNav/>\n       <Routes>\n         <Route path=\"/\" element={<AllEventsPage />} />\n         <Route path=\"/favorites\" element={<FavoritesPage />} />\n         <Route path=\"/new-event\" element={<NewEventPage />} />\n"
+                },
+                {
+                    "date": 1669023850051,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,22 +2,22 @@\n \n import AllEventsPage from './pages/AllEvents';\n import FavoritesPage from './pages/Favorites';\n import NewEventPage from './pages/NewEvent';\n-import MainNav from './components/layout/MainNav';\n+import Layout from './components/layout/Layout';\n \n function App() {\n-  //localhost:3000/\n+  //localhost:3000/ \n   //my-page.com/\n \n   return (\n-    <div>\n+    <Layout>\n       <Routes>\n         <Route path=\"/\" element={<AllEventsPage />} />\n         <Route path=\"/favorites\" element={<FavoritesPage />} />\n         <Route path=\"/new-event\" element={<NewEventPage />} />\n       </Routes>\n-    </div>\n+    </Layout>\n   );\n }\n \n export default App;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670331760036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,11 +5,8 @@\n import NewEventPage from './pages/NewEvent';\n import Layout from './components/layout/Layout';\n \n function App() {\n-  //localhost:3000/ \n-  //my-page.com/\n-\n   return (\n     <Layout>\n       <Routes>\n         <Route path=\"/\" element={<AllEventsPage />} />\n"
                 }
             ],
             "date": 1668603904122,

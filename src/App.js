@@ -1,13 +1,19 @@
-import Todo from "./components/Todo";
+import { Routes, Route } from 'react-router-dom'; //Rote v6.4.3
+
+import AllEventsPage from './pages/AllEvents';
+import FavoritesPage from './pages/Favorites';
+import NewEventPage from './pages/NewEvent';
+import Layout from './components/layout/Layout';
 
 function App() {
   return (
-    <div>
-      <h1>My Cart</h1>
-      <Todo text="Kitchen Island - $1.500"/>
-      <Todo text="Sideboard - $1.100"/>
-      <Todo text="Chair - $100"/>
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<AllEventsPage />} />
+        <Route path="/favorites" element={<FavoritesPage />} />
+        <Route path="/new-event" element={<NewEventPage />} />
+      </Routes>
+    </Layout>
   );
 }
 

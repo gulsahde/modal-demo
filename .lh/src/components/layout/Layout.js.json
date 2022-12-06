@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/components/layout/Layout.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1669023121006,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1669023138283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,11 @@\n import MainNav from './MainNav'\r\n \r\n function Layout(){\r\n     return(\r\n-        <MainNav/>\r\n+        <div>\r\n+            <MainNav/>\r\n+        </div>\r\n     )\r\n }\r\n \r\n export default Layout;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669023183318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,11 @@\n function Layout(){\r\n     return(\r\n         <div>\r\n             <MainNav/>\r\n+            <main>\r\n+                \r\n+            </main>\r\n         </div>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1669024558064,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,12 @@\n import classes from './Layout.module.css'\r\n import MainNav from './MainNav'\r\n \r\n-function Layout(){\r\n+function Layout(props){\r\n     return(\r\n         <div>\r\n             <MainNav/>\r\n-            <main>\r\n-                \r\n-            </main>\r\n+            <main className={classes.main}>{props.children}</main>\r\n         </div>\r\n     )\r\n }\r\n \r\n"
+                }
+            ],
+            "date": 1669023121006,
+            "name": "Commit-0",
+            "content": "import classes from './Layout.module.css'\r\nimport MainNav from './MainNav'\r\n\r\nfunction Layout(){\r\n    return(\r\n        <MainNav/>\r\n    )\r\n}\r\n\r\nexport default Layout;"
+        }
+    ]
+}

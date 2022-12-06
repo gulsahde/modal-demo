@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 6,
+            "activePatchIndex": 46,
             "patches": [
                 {
                     "date": 1668631800900,
@@ -32,6 +32,166 @@
                 {
                     "date": 1668674054569,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n-function FavoritesPage(){\r\n-    return(\r\n-        <div>Favorites Page</div>\r\n-    )\r\n-}\r\n+// import React from 'react';\r\n \r\n\\ No newline at end of file\n-export default FavoritesPage;\n+// function FavoritesPage(){\r\n+//     return(\r\n+//         <div>Favorites Page</div>\r\n+//     )\r\n+// }\r\n+\r\n+// export default FavoritesPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1668764578638,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,7 @@\n-// import React from 'react';\r\n+function FavoritesPage(){\r\n+    return(\r\n+        <div></div>\r\n+    )\r\n+}\r\n \r\n-// function FavoritesPage(){\r\n-//     return(\r\n\\ No newline at end of file\n-//         <div>Favorites Page</div>\r\n-//     )\r\n-// }\r\n-\r\n-// export default FavoritesPage;\n+export default FavoritesPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1668765071398,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function FavoritesPage(){\r\n     return(\r\n-        <div></div>\r\n+        <div>My favorite events</div>\r\n     )\r\n }\r\n \r\n export default FavoritesPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1668778829104,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n function FavoritesPage(){\r\n     return(\r\n-        <div>My favorite events</div>\r\n+        <div>Your Favorites!</div>\r\n     )\r\n }\r\n \r\n export default FavoritesPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669804156917,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,16 @@\n+import {useContext} from 'react';\r\n+import FavoritesContext from '../store/favorites-context';\r\n+import EventList from '../components/events/EventList';\r\n+\r\n function FavoritesPage(){\r\n+    const favoritesCtx=useContext(FavoritesContext);\r\n+\r\n     return(\r\n-        <div>Your Favorites!</div>\r\n+        <section>\r\n+            <h1>My Favorites</h1>\r\n+            <EventList events={favoritesCtx.favorites}/> \r\n+        </section>\r\n     )\r\n }\r\n \r\n export default FavoritesPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669804316203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,15 @@\n-import {useContext} from 'react';\r\n+import { useContext } from 'react';\r\n import FavoritesContext from '../store/favorites-context';\r\n import EventList from '../components/events/EventList';\r\n \r\n-function FavoritesPage(){\r\n-    const favoritesCtx=useContext(FavoritesContext);\r\n+function FavoritesPage() {\r\n+    const favoritesCtx = useContext(FavoritesContext);\r\n \r\n-    return(\r\n+    return (\r\n         <section>\r\n             <h1>My Favorites</h1>\r\n-            <EventList events={favoritesCtx.favorites}/> \r\n+            <EventList events={favoritesCtx.favorites} />\r\n         </section>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1669805656279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,13 +4,12 @@\n \r\n function FavoritesPage() {\r\n     const favoritesCtx = useContext(FavoritesContext);\r\n \r\n-    return (\r\n-        <section>\r\n+    return <section>\r\n             <h1>My Favorites</h1>\r\n             <EventList events={favoritesCtx.favorites} />\r\n         </section>\r\n-    )\r\n+    \r\n }\r\n \r\n export default FavoritesPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669806009939,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \r\n     return <section>\r\n             <h1>My Favorites</h1>\r\n             <EventList events={favoritesCtx.favorites} />\r\n-        </section>\r\n+        </section>;\r\n     \r\n }\r\n \r\n export default FavoritesPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669806059973,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,14 @@\n \r\n function FavoritesPage() {\r\n     const favoritesCtx = useContext(FavoritesContext);\r\n \r\n-    return <section>\r\n-            <h1>My Favorites</h1>\r\n-            <EventList events={favoritesCtx.favorites} />\r\n-        </section>;\r\n+    return (\r\n+    <section>\r\n+        <h1>My Favorites</h1>\r\n+        <EventList events={favoritesCtx.favorites} />\r\n+    </section>\r\n+    );\r\n     \r\n }\r\n \r\n export default FavoritesPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669806078283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,12 +5,12 @@\n function FavoritesPage() {\r\n     const favoritesCtx = useContext(FavoritesContext);\r\n \r\n     return (\r\n-    <section>\r\n-        <h1>My Favorites</h1>\r\n-        <EventList events={favoritesCtx.favorites} />\r\n-    </section>\r\n+        <section>\r\n+            <h1>My Favorites</h1>\r\n+            <EventList events={favoritesCtx.favorites} />\r\n+        </section>\r\n     );\r\n     \r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1669806603253,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,10 @@\n import EventList from '../components/events/EventList';\r\n \r\n function FavoritesPage() {\r\n     const favoritesCtx = useContext(FavoritesContext);\r\n+    let content;\r\n+    if (favoritesCtx.totalFavorites === 0){}\r\n \r\n     return (\r\n         <section>\r\n             <h1>My Favorites</h1>\r\n"
+                },
+                {
+                    "date": 1669809554322,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,11 @@\n \r\n function FavoritesPage() {\r\n     const favoritesCtx = useContext(FavoritesContext);\r\n     let content;\r\n-    if (favoritesCtx.totalFavorites === 0){}\r\n-\r\n+    if (favoritesCtx.totalFavorites === 0){\r\n+        content = <p>You got no favorites yet. Start adding some?</p>\r\n+    }\r\n     return (\r\n         <section>\r\n             <h1>My Favorites</h1>\r\n             <EventList events={favoritesCtx.favorites} />\r\n"
+                },
+                {
+                    "date": 1669809627309,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,12 +3,16 @@\n import EventList from '../components/events/EventList';\r\n \r\n function FavoritesPage() {\r\n     const favoritesCtx = useContext(FavoritesContext);\r\n+\r\n     let content;\r\n     if (favoritesCtx.totalFavorites === 0){\r\n         content = <p>You got no favorites yet. Start adding some?</p>\r\n     }\r\n+    else{\r\n+        content = <EventList events={favoritesCtx.favorites} />\r\n+    }\r\n     return (\r\n         <section>\r\n             <h1>My Favorites</h1>\r\n             <EventList events={favoritesCtx.favorites} />\r\n"
+                },
+                {
+                    "date": 1669810049296,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     }\r\n     return (\r\n         <section>\r\n             <h1>My Favorites</h1>\r\n-            <EventList events={favoritesCtx.favorites} />\r\n+            {content}\r\n         </section>\r\n     );\r\n     \r\n }\r\n"
+                },
+                {
+                    "date": 1669811948562,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,22 +1,40 @@\n-import { useContext } from 'react';\r\n+import { useContext, useEffect } from 'react';\r\n import FavoritesContext from '../store/favorites-context';\r\n import EventList from '../components/events/EventList';\r\n \r\n function FavoritesPage() {\r\n     const favoritesCtx = useContext(FavoritesContext);\r\n \r\n     let content;\r\n+    const [loadedEvents, setLoadedEvents] = useState([]);\r\n     if (favoritesCtx.totalFavorites === 0){\r\n         content = <p>You got no favorites yet. Start adding some?</p>\r\n     }\r\n     else{\r\n-        content = <EventList events={favoritesCtx.favorites} />\r\n+        // content = <EventList events={favoritesCtx.favorites} />\r\n+        useEffect(() => {\r\n+        \r\n+            fetch('https://event-website-project-ee45b-default-rtdb.firebaseio.com/events.json'\r\n+            ).then(response => {\r\n+              return response.json();\r\n+            }).then(data =>{\r\n+        \r\n+              const events = [];\r\n+              for(const key in data){\r\n+                const event = { //this is for every event\r\n+                  id:key,\r\n+                  ...data[key]\r\n+                };\r\n+                events.push(event);\r\n+              }\r\n+            });\r\n+          }, []);\r\n     }\r\n     return (\r\n         <section>\r\n             <h1>My Favorites</h1>\r\n-            {content}\r\n+            <EventList events={loadedEvents}/> \r\n         </section>\r\n     );\r\n     \r\n }\r\n"
+                },
+                {
+                    "date": 1669812014609,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,8 +26,9 @@\n                   ...data[key]\r\n                 };\r\n                 events.push(event);\r\n               }\r\n+              setLoadedEvents(events);\r\n             });\r\n           }, []);\r\n     }\r\n     return (\r\n"
+                },
+                {
+                    "date": 1669812037326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,8 +34,9 @@\n     return (\r\n         <section>\r\n             <h1>My Favorites</h1>\r\n             <EventList events={loadedEvents}/> \r\n+            {content}\r\n         </section>\r\n     );\r\n     \r\n }\r\n"
+                },
+                {
+                    "date": 1669812057640,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-import { useContext, useEffect } from 'react';\r\n+import { useContext, useEffect, useState } from 'react';\r\n import FavoritesContext from '../store/favorites-context';\r\n import EventList from '../components/events/EventList';\r\n \r\n function FavoritesPage() {\r\n"
+                },
+                {
+                    "date": 1669812155775,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,16 +3,12 @@\n import EventList from '../components/events/EventList';\r\n \r\n function FavoritesPage() {\r\n     const favoritesCtx = useContext(FavoritesContext);\r\n+    const [loadedEvents, setLoadedEvents] = useState([]);\r\n \r\n-    let content;\r\n-    const [loadedEvents, setLoadedEvents] = useState([]);\r\n-    if (favoritesCtx.totalFavorites === 0){\r\n-        content = <p>You got no favorites yet. Start adding some?</p>\r\n-    }\r\n-    else{\r\n-        // content = <EventList events={favoritesCtx.favorites} />\r\n+\r\n+      \r\n         useEffect(() => {\r\n         \r\n             fetch('https://event-website-project-ee45b-default-rtdb.firebaseio.com/events.json'\r\n             ).then(response => {\r\n@@ -29,14 +25,13 @@\n               }\r\n               setLoadedEvents(events);\r\n             });\r\n           }, []);\r\n-    }\r\n+    \r\n     return (\r\n         <section>\r\n             <h1>My Favorites</h1>\r\n             <EventList events={loadedEvents}/> \r\n-            {content}\r\n         </section>\r\n     );\r\n     \r\n }\r\n"
+                },
+                {
+                    "date": 1669812172941,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,10 +4,10 @@\n \r\n function FavoritesPage() {\r\n     const favoritesCtx = useContext(FavoritesContext);\r\n     const [loadedEvents, setLoadedEvents] = useState([]);\r\n+    if (favoritesCtx.totalFavorites === 0){\r\n \r\n-\r\n       \r\n         useEffect(() => {\r\n         \r\n             fetch('https://event-website-project-ee45b-default-rtdb.firebaseio.com/events.json'\r\n@@ -25,8 +25,10 @@\n               }\r\n               setLoadedEvents(events);\r\n             });\r\n           }, []);\r\n+\r\n+        }\r\n     \r\n     return (\r\n         <section>\r\n             <h1>My Favorites</h1>\r\n"
+                },
+                {
+                    "date": 1669812290566,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,11 +4,10 @@\n \r\n function FavoritesPage() {\r\n     const favoritesCtx = useContext(FavoritesContext);\r\n     const [loadedEvents, setLoadedEvents] = useState([]);\r\n-    if (favoritesCtx.totalFavorites === 0){\r\n+    \r\n \r\n-      \r\n         useEffect(() => {\r\n         \r\n             fetch('https://event-website-project-ee45b-default-rtdb.firebaseio.com/events.json'\r\n             ).then(response => {\r\n@@ -25,14 +24,21 @@\n               }\r\n               setLoadedEvents(events);\r\n             });\r\n           }, []);\r\n-\r\n-        }\r\n+          if (favoritesCtx.totalFavorites !== 0){\r\n+            return(\r\n+                <section>\r\n+            <p>You got no favorites yet. Start adding some?</p>\r\n+            </section>\r\n+            )\r\n+          }\r\n     \r\n+    \r\n     return (\r\n         <section>\r\n             <h1>My Favorites</h1>\r\n+            \r\n             <EventList events={loadedEvents}/> \r\n         </section>\r\n     );\r\n     \r\n"
+                },
+                {
+                    "date": 1669812359470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,24 +24,27 @@\n               }\r\n               setLoadedEvents(events);\r\n             });\r\n           }, []);\r\n-          if (favoritesCtx.totalFavorites !== 0){\r\n+          if (favoritesCtx.totalFavorites === 0){\r\n+            return(<EventList events={loadedEvents}/> )\r\n+          }\r\n+          else{\r\n             return(\r\n                 <section>\r\n             <p>You got no favorites yet. Start adding some?</p>\r\n             </section>\r\n             )\r\n           }\r\n     \r\n     \r\n-    return (\r\n-        <section>\r\n-            <h1>My Favorites</h1>\r\n+    // return (\r\n+    //     <section>\r\n+    //         <h1>My Favorites</h1>\r\n             \r\n-            <EventList events={loadedEvents}/> \r\n-        </section>\r\n-    );\r\n+            \r\n+    //     </section>\r\n+    // );\r\n     \r\n }\r\n \r\n export default FavoritesPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669812392453,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,15 +25,16 @@\n               setLoadedEvents(events);\r\n             });\r\n           }, []);\r\n           if (favoritesCtx.totalFavorites === 0){\r\n-            return(<EventList events={loadedEvents}/> )\r\n+            return(\r\n+                <section>\r\n+                <p>You got no favorites yet. Start adding some?</p>\r\n+                </section> )\r\n           }\r\n           else{\r\n             return(\r\n-                <section>\r\n-            <p>You got no favorites yet. Start adding some?</p>\r\n-            </section>\r\n+                <EventList events={loadedEvents}/>\r\n             )\r\n           }\r\n     \r\n     \r\n"
+                },
+                {
+                    "date": 1669814333473,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,13 +15,16 @@\n             }).then(data =>{\r\n         \r\n               const events = [];\r\n               for(const key in data){\r\n+                if(key===favoritesCtx.id){\r\n                 const event = { //this is for every event\r\n-                  id:key,\r\n+                    id:key,\r\n                   ...data[key]\r\n                 };\r\n                 events.push(event);\r\n+            }//****if */\r\n+                \r\n               }\r\n               setLoadedEvents(events);\r\n             });\r\n           }, []);\r\n"
+                },
+                {
+                    "date": 1669814408514,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n             }).then(data =>{\r\n         \r\n               const events = [];\r\n               for(const key in data){\r\n-                if(key===favoritesCtx.id){\r\n+                if(key===favoritesCtx.itemIsFavorite.id){\r\n                 const event = { //this is for every event\r\n                     id:key,\r\n                   ...data[key]\r\n                 };\r\n"
+                },
+                {
+                    "date": 1669814525278,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n             }).then(data =>{\r\n         \r\n               const events = [];\r\n               for(const key in data){\r\n-                if(key===favoritesCtx.itemIsFavorite.id){\r\n+                if(key===favoritesCtx.itemIsFavorite.eventId){\r\n                 const event = { //this is for every event\r\n                     id:key,\r\n                   ...data[key]\r\n                 };\r\n"
+                },
+                {
+                    "date": 1669814544419,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n             }).then(data =>{\r\n         \r\n               const events = [];\r\n               for(const key in data){\r\n-                if(key===favoritesCtx.itemIsFavorite.eventId){\r\n+                if(key===favoritesCtx.itemIsFavorite){\r\n                 const event = { //this is for every event\r\n                     id:key,\r\n                   ...data[key]\r\n                 };\r\n"
+                },
+                {
+                    "date": 1669814671707,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n             }).then(data =>{\r\n         \r\n               const events = [];\r\n               for(const key in data){\r\n-                if(key===favoritesCtx.itemIsFavorite){\r\n+                if(key===favoritesCtx.id){\r\n                 const event = { //this is for every event\r\n                     id:key,\r\n                   ...data[key]\r\n                 };\r\n"
+                },
+                {
+                    "date": 1669814719109,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n             }).then(data =>{\r\n         \r\n               const events = [];\r\n               for(const key in data){\r\n-                if(key===favoritesCtx.id){\r\n+                if(key===favoritesCtx.itemIsFavorite){\r\n                 const event = { //this is for every event\r\n                     id:key,\r\n                   ...data[key]\r\n                 };\r\n"
+                },
+                {
+                    "date": 1669814868800,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import { useContext, useEffect, useState } from 'react';\r\n import FavoritesContext from '../store/favorites-context';\r\n+import { FavoritesContextProvider } from '../store/favorites-context';\r\n import EventList from '../components/events/EventList';\r\n \r\n function FavoritesPage() {\r\n     const favoritesCtx = useContext(FavoritesContext);\r\n@@ -15,9 +16,9 @@\n             }).then(data =>{\r\n         \r\n               const events = [];\r\n               for(const key in data){\r\n-                if(key===favoritesCtx.itemIsFavorite){\r\n+                if(key===FavoritesContextProvider(eventId)){\r\n                 const event = { //this is for every event\r\n                     id:key,\r\n                   ...data[key]\r\n                 };\r\n"
+                },
+                {
+                    "date": 1669815027957,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,12 @@\n import { useContext, useEffect, useState } from 'react';\r\n import FavoritesContext from '../store/favorites-context';\r\n-import { FavoritesContextProvider } from '../store/favorites-context';\r\n import EventList from '../components/events/EventList';\r\n \r\n-function FavoritesPage() {\r\n+function FavoritesPage(props) {\r\n     const favoritesCtx = useContext(FavoritesContext);\r\n     const [loadedEvents, setLoadedEvents] = useState([]);\r\n-    \r\n+    const itemIsFavorite = favoritesCtx.itemIsFavorite(props.id);\r\n \r\n         useEffect(() => {\r\n         \r\n             fetch('https://event-website-project-ee45b-default-rtdb.firebaseio.com/events.json'\r\n@@ -16,14 +15,15 @@\n             }).then(data =>{\r\n         \r\n               const events = [];\r\n               for(const key in data){\r\n-                if(key===FavoritesContextProvider(eventId)){\r\n+                if(key===itemIsFavorite){\r\n                 const event = { //this is for every event\r\n                     id:key,\r\n                   ...data[key]\r\n                 };\r\n                 events.push(event);\r\n+        \r\n             }//****if */\r\n                 \r\n               }\r\n               setLoadedEvents(events);\r\n"
+                },
+                {
+                    "date": 1669815082500,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,10 +21,13 @@\n                     id:key,\r\n                   ...data[key]\r\n                 };\r\n                 events.push(event);\r\n-        \r\n+\r\n             }//****if */\r\n+            else{\r\n+                favoritesCtx.removeFavorite(props.id)\r\n+            }\r\n                 \r\n               }\r\n               setLoadedEvents(events);\r\n             });\r\n"
+                },
+                {
+                    "date": 1669815202279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,36 +1,36 @@\n import { useContext, useEffect, useState } from 'react';\r\n import FavoritesContext from '../store/favorites-context';\r\n-import EventList from '../components/events/EventList';\r\n+import EventList from '../components/favEvents/EventList';\r\n \r\n function FavoritesPage(props) {\r\n     const favoritesCtx = useContext(FavoritesContext);\r\n     const [loadedEvents, setLoadedEvents] = useState([]);\r\n     const itemIsFavorite = favoritesCtx.itemIsFavorite(props.id);\r\n \r\n         useEffect(() => {\r\n         \r\n-            fetch('https://event-website-project-ee45b-default-rtdb.firebaseio.com/events.json'\r\n+            fetch('https://event-website-project-ee45b-default-rtdb.firebaseio.com/favEvents.json'\r\n             ).then(response => {\r\n               return response.json();\r\n             }).then(data =>{\r\n         \r\n-              const events = [];\r\n+              const favEvents = [];\r\n               for(const key in data){\r\n                 if(key===itemIsFavorite){\r\n                 const event = { //this is for every event\r\n                     id:key,\r\n                   ...data[key]\r\n                 };\r\n-                events.push(event);\r\n+                favEvents.push(event);\r\n \r\n             }//****if */\r\n             else{\r\n-                favoritesCtx.removeFavorite(props.id)\r\n+                favoritesCtx.removeFavorite(props.id);\r\n             }\r\n                 \r\n               }\r\n-              setLoadedEvents(events);\r\n+              setLoadedEvents(favEvents);\r\n             });\r\n           }, []);\r\n           if (favoritesCtx.totalFavorites === 0){\r\n             return(\r\n@@ -39,9 +39,9 @@\n                 </section> )\r\n           }\r\n           else{\r\n             return(\r\n-                <EventList events={loadedEvents}/>\r\n+                <EventList favEvents={loadedEvents}/>\r\n             )\r\n           }\r\n     \r\n     \r\n"
+                },
+                {
+                    "date": 1669815213748,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n                 </section> )\r\n           }\r\n           else{\r\n             return(\r\n-                <EventList favEvents={loadedEvents}/>\r\n+                <EventList events={loadedEvents}/>\r\n             )\r\n           }\r\n     \r\n     \r\n"
+                },
+                {
+                    "date": 1669815234430,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,36 +1,36 @@\n import { useContext, useEffect, useState } from 'react';\r\n import FavoritesContext from '../store/favorites-context';\r\n-import EventList from '../components/favEvents/EventList';\r\n+import EventList from '../components/events/EventList';\r\n \r\n function FavoritesPage(props) {\r\n     const favoritesCtx = useContext(FavoritesContext);\r\n     const [loadedEvents, setLoadedEvents] = useState([]);\r\n     const itemIsFavorite = favoritesCtx.itemIsFavorite(props.id);\r\n \r\n         useEffect(() => {\r\n         \r\n-            fetch('https://event-website-project-ee45b-default-rtdb.firebaseio.com/favEvents.json'\r\n+            fetch('https://event-website-project-ee45b-default-rtdb.firebaseio.com/events.json'\r\n             ).then(response => {\r\n               return response.json();\r\n             }).then(data =>{\r\n         \r\n-              const favEvents = [];\r\n+              const events = [];\r\n               for(const key in data){\r\n                 if(key===itemIsFavorite){\r\n                 const event = { //this is for every event\r\n                     id:key,\r\n                   ...data[key]\r\n                 };\r\n-                favEvents.push(event);\r\n+                events.push(event);\r\n \r\n             }//****if */\r\n             else{\r\n                 favoritesCtx.removeFavorite(props.id);\r\n             }\r\n                 \r\n               }\r\n-              setLoadedEvents(favEvents);\r\n+              setLoadedEvents(events);\r\n             });\r\n           }, []);\r\n           if (favoritesCtx.totalFavorites === 0){\r\n             return(\r\n"
+                },
+                {
+                    "date": 1669815267174,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n                 \r\n               }\r\n               setLoadedEvents(events);\r\n             });\r\n-          }, []);\r\n+          }, [favoritesCtx, itemIsFavorite, props.id]);\r\n           if (favoritesCtx.totalFavorites === 0){\r\n             return(\r\n                 <section>\r\n                 <p>You got no favorites yet. Start adding some?</p>\r\n"
+                },
+                {
+                    "date": 1669816185114,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,58 +1,24 @@\n-import { useContext, useEffect, useState } from 'react';\r\n+import { useContext } from 'react';\r\n import FavoritesContext from '../store/favorites-context';\r\n import EventList from '../components/events/EventList';\r\n \r\n-function FavoritesPage(props) {\r\n+function FavoritesPage() {\r\n     const favoritesCtx = useContext(FavoritesContext);\r\n-    const [loadedEvents, setLoadedEvents] = useState([]);\r\n-    const itemIsFavorite = favoritesCtx.itemIsFavorite(props.id);\r\n \r\n-        useEffect(() => {\r\n-        \r\n-            fetch('https://event-website-project-ee45b-default-rtdb.firebaseio.com/events.json'\r\n-            ).then(response => {\r\n-              return response.json();\r\n-            }).then(data =>{\r\n-        \r\n-              const events = [];\r\n-              for(const key in data){\r\n-                if(key===itemIsFavorite){\r\n-                const event = { //this is for every event\r\n-                    id:key,\r\n-                  ...data[key]\r\n-                };\r\n-                events.push(event);\r\n-\r\n-            }//****if */\r\n-            else{\r\n-                favoritesCtx.removeFavorite(props.id);\r\n-            }\r\n-                \r\n-              }\r\n-              setLoadedEvents(events);\r\n-            });\r\n-          }, [favoritesCtx, itemIsFavorite, props.id]);\r\n-          if (favoritesCtx.totalFavorites === 0){\r\n-            return(\r\n-                <section>\r\n-                <p>You got no favorites yet. Start adding some?</p>\r\n-                </section> )\r\n-          }\r\n-          else{\r\n-            return(\r\n-                <EventList events={loadedEvents}/>\r\n-            )\r\n-          }\r\n+    let content;\r\n+    if (favoritesCtx.totalFavorites === 0){\r\n+        content = <p>You got no favorites yet. Start adding some?</p>\r\n+    }\r\n+    else{\r\n+        content = <EventList events={favoritesCtx.favorites} />\r\n+    }\r\n+    return (\r\n+        <section>\r\n+            <h1>My Favorites</h1>\r\n+            {content}\r\n+        </section>\r\n+    );\r\n     \r\n-    \r\n-    // return (\r\n-    //     <section>\r\n-    //         <h1>My Favorites</h1>\r\n-            \r\n-            \r\n-    //     </section>\r\n-    // );\r\n-    \r\n }\r\n \r\n export default FavoritesPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670332551567,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     const favoritesCtx = useContext(FavoritesContext);\r\n \r\n     let content;\r\n     if (favoritesCtx.totalFavorites === 0){\r\n-        content = <p>You got no favorites yet. Start adding some?</p>\r\n+        content = <p>There is no favorite event yet. There is definitely an event that you will like, check it out..</p>\r\n     }\r\n     else{\r\n         content = <EventList events={favoritesCtx.favorites} />\r\n     }\r\n"
+                },
+                {
+                    "date": 1670332570468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,10 @@\n     const favoritesCtx = useContext(FavoritesContext);\r\n \r\n     let content;\r\n     if (favoritesCtx.totalFavorites === 0){\r\n-        content = <p>There is no favorite event yet. There is definitely an event that you will like, check it out..</p>\r\n+        content = <p>There is no favorite event yet. <br/>\r\n+            There is definitely an event that you will like, check it out..</p>\r\n     }\r\n     else{\r\n         content = <EventList events={favoritesCtx.favorites} />\r\n     }\r\n"
+                },
+                {
+                    "date": 1670332589174,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     const favoritesCtx = useContext(FavoritesContext);\r\n \r\n     let content;\r\n     if (favoritesCtx.totalFavorites === 0){\r\n-        content = <p>There is no favorite event yet. <br/>\r\n+        content = <p><i>There is no favorite event yet. </i><br/>\r\n             There is definitely an event that you will like, check it out..</p>\r\n     }\r\n     else{\r\n         content = <EventList events={favoritesCtx.favorites} />\r\n"
+                },
+                {
+                    "date": 1670332599504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     const favoritesCtx = useContext(FavoritesContext);\r\n \r\n     let content;\r\n     if (favoritesCtx.totalFavorites === 0){\r\n-        content = <p><i>There is no favorite event yet. </i><br/>\r\n+        content = <p><i><b>There is no favorite event yet. </b></i><br/>\r\n             There is definitely an event that you will like, check it out..</p>\r\n     }\r\n     else{\r\n         content = <EventList events={favoritesCtx.favorites} />\r\n"
                 }
             ],
             "date": 1668631800900,

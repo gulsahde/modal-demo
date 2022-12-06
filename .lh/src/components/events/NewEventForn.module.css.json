@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/events/NewEventForn.module.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1669027568386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1669027568386,
+            "name": "Commit-0",
+            "content": ".form {\r\n    padding: 1rem;\r\n  }\r\n  \r\n  .control {\r\n    margin-bottom: 0.5rem;\r\n  }\r\n  \r\n  .control label {\r\n    display: block;\r\n    font-weight: bold;\r\n    margin-bottom: 0.5rem;\r\n  }\r\n  \r\n  .control input,\r\n  .control textarea {\r\n    display: block;\r\n    font: inherit;\r\n    border-radius: 4px;\r\n    border: 1px solid #ccc;\r\n    padding: 0.25rem;\r\n    width: 100%;\r\n  }\r\n  \r\n  .actions {\r\n    margin-top: 1rem;\r\n    text-align: right;\r\n  }\r\n  \r\n  .actions button {\r\n    font: inherit;\r\n    cursor: pointer;\r\n    background-color: #77002e;\r\n    color: white;\r\n    padding: 0.5rem 1.5rem;\r\n    border: 1px solid #77002e;\r\n    border-radius: 4px;\r\n    font-weight: bold;\r\n  }\r\n  \r\n  .actions button:hover,\r\n  .actions button:active {\r\n    background-color: #a50e48;\r\n    border-color: #a50e48;\r\n  }"
+        }
+    ]
+}

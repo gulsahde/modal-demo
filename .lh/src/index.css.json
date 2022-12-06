@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 17,
+            "activePatchIndex": 31,
             "patches": [
                 {
                     "date": 1668603900366,
@@ -76,6 +76,62 @@
                 {
                     "date": 1668757137974,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,8 @@\n body {\r\n   font-family: sans-serif;\r\n   margin: 3rem;\r\n   background-color: #FDFEFE;\r\n-  /* #dfdfdf; */\r\n }\r\n \r\n h1, h2 {\r\n   color: #333333;\r\n"
+                },
+                {
+                    "date": 1668762012060,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   background-color: #FDFEFE;\r\n }\r\n \r\n h1, h2 {\r\n-  color: #333333;\r\n+  color: #2C3E50;\r\n }\r\n \r\n .btn {\r\n   font: inherit;\r\n"
+                },
+                {
+                    "date": 1668762025040,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   background-color: #FDFEFE;\r\n }\r\n \r\n h1, h2 {\r\n-  color: #2C3E50;\r\n+  color: #566573;\r\n }\r\n \r\n .btn {\r\n   font: inherit;\r\n"
+                },
+                {
+                    "date": 1668762031608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   background-color: #FDFEFE;\r\n }\r\n \r\n h1, h2 {\r\n-  color: #566573;\r\n+  color: #2C3E50;\r\n }\r\n \r\n .btn {\r\n   font: inherit;\r\n"
+                },
+                {
+                    "date": 1668762052626,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n .card {\r\n   background-color:#F0F3F4;\r\n    /* white; */\r\n   border-radius: 4px;\r\n-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\r\n+  box-shadow: 0 1px 4px #212F3D;\r\n   padding: 1rem;\r\n   width: 20rem;\r\n }\r\n \r\n@@ -50,9 +50,9 @@\n   text-align: right;\r\n }\r\n \r\n .modal {\r\n-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\r\n+  box-shadow: 0 1px 4px #212F3D;\r\n   border-radius: 6px;\r\n   background-color: white;\r\n   padding: 1rem;\r\n   text-align: center;\r\n"
+                },
+                {
+                    "date": 1668762074506,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n   background-color: #FDFEFE;\r\n }\r\n \r\n h1, h2 {\r\n-  color: #2C3E50;\r\n+  color: #2C3E50\r\n }\r\n \r\n .btn {\r\n   font: inherit;\r\n@@ -40,9 +40,9 @@\n .card {\r\n   background-color:#F0F3F4;\r\n    /* white; */\r\n   border-radius: 4px;\r\n-  box-shadow: 0 1px 4px #212F3D;\r\n+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\r\n   padding: 1rem;\r\n   width: 20rem;\r\n }\r\n \r\n@@ -50,9 +50,9 @@\n   text-align: right;\r\n }\r\n \r\n .modal {\r\n-  box-shadow: 0 1px 4px #212F3D;\r\n+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\r\n   border-radius: 6px;\r\n   background-color: white;\r\n   padding: 1rem;\r\n   text-align: center;\r\n"
+                },
+                {
+                    "date": 1668762174296,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,74 +1,21 @@\n+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');\r\n+\r\n * {\r\n   box-sizing: border-box;\r\n }\r\n \r\n body {\r\n-  font-family: sans-serif;\r\n-  margin: 3rem;\r\n-  background-color: #FDFEFE;\r\n+  font-family: 'Open Sans', sans-serif;\r\n+  margin: 0;\r\n+  background-color: #fcf3f6;\r\n }\r\n \r\n-h1, h2 {\r\n-  color: #2C3E50\r\n+h1 {\r\n+  font-size: 2.5rem;\r\n+  color: #2c292b;\r\n }\r\n \r\n-.btn {\r\n-  font: inherit;\r\n-  padding: 0.5rem 1.5rem;\r\n-  cursor: pointer;\r\n-  border-radius: 4px;\r\n-  background-color: #CB4335;\r\n-  color: white;\r\n-  border: 1px solid #CB4335;\r\n-  margin: 0 1rem;\r\n-}\r\n-\r\n-.btn:hover {\r\n-  background-color: #EC7063;\r\n-  border-color: #EC7063;\r\n-}\r\n-\r\n-.btn--alt {\r\n-  background-color: transparent;\r\n-  color: #CB4335;\r\n-}\r\n-\r\n-.btn--alt:hover {\r\n-  background-color: #f8dae9;\r\n-}\r\n-\r\n-.card {\r\n-  background-color:#F0F3F4;\r\n-   /* white; */\r\n-  border-radius: 4px;\r\n-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\r\n-  padding: 1rem;\r\n-  width: 20rem;\r\n-}\r\n-\r\n-.actions {\r\n-  text-align: right;\r\n-}\r\n-\r\n-.modal {\r\n-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);\r\n-  border-radius: 6px;\r\n-  background-color: white;\r\n-  padding: 1rem;\r\n-  text-align: center;\r\n-  width: 30rem;\r\n-  z-index: 10;\r\n-  position: fixed;\r\n-  top: 20vh;\r\n-  left: calc(50% - 15rem);\r\n-}\r\n-\r\n-.backdrop {\r\n-  position: fixed;\r\n-  z-index: 1;\r\n-  background-color: rgba(0, 0, 0, 0.75);\r\n-  width: 100%;\r\n-  height: 100vh;\r\n-  top: 0;\r\n-  left: 0;\r\n+h2 {\r\n+  font-size: 1.5rem;\r\n+  color: #2c292b;\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670330891515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,10 @@\n \r\n body {\r\n   font-family: 'Open Sans', sans-serif;\r\n   margin: 0;\r\n-  background-color: #fcf3f6;\r\n+  background-color:red;\r\n+  /* #fcf3f6; */\r\n }\r\n \r\n h1 {\r\n   font-size: 2.5rem;\r\n"
+                },
+                {
+                    "date": 1670330900772,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,9 @@\n \r\n body {\r\n   font-family: 'Open Sans', sans-serif;\r\n   margin: 0;\r\n-  background-color:red;\r\n-  /* #fcf3f6; */\r\n+  background-color: #fcf3f6;\r\n }\r\n \r\n h1 {\r\n   font-size: 2.5rem;\r\n"
+                },
+                {
+                    "date": 1670331077249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n \r\n body {\r\n   font-family: 'Open Sans', sans-serif;\r\n   margin: 0;\r\n-  background-color: #fcf3f6;\r\n+  background-color:#eee1ed;\r\n }\r\n \r\n h1 {\r\n   font-size: 2.5rem;\r\n"
+                },
+                {
+                    "date": 1670331094903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,10 @@\n }\r\n \r\n h1 {\r\n   font-size: 2.5rem;\r\n-  color: #2c292b;\r\n+  color:red;\r\n+   /* #2c292b; */\r\n }\r\n \r\n h2 {\r\n   font-size: 1.5rem;\r\n"
+                },
+                {
+                    "date": 1670331113165,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n }\r\n \r\n h1 {\r\n   font-size: 2.5rem;\r\n-  color:red;\r\n+  color:#7a0907;\r\n    /* #2c292b; */\r\n }\r\n \r\n h2 {\r\n"
+                },
+                {
+                    "date": 1670331173115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n }\r\n \r\n h1 {\r\n   font-size: 2.5rem;\r\n-  color:#7a0907;\r\n+  color:#121208;\r\n    /* #2c292b; */\r\n }\r\n \r\n h2 {\r\n"
+                },
+                {
+                    "date": 1670331216740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,6 +17,7 @@\n }\r\n \r\n h2 {\r\n   font-size: 1.5rem;\r\n-  color: #2c292b;\r\n+  color:red;\r\n+   /* #2c292b; */\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670331262079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,12 +12,10 @@\n \r\n h1 {\r\n   font-size: 2.5rem;\r\n   color:#121208;\r\n-   /* #2c292b; */\r\n }\r\n \r\n h2 {\r\n   font-size: 1.5rem;\r\n-  color:red;\r\n-   /* #2c292b; */\r\n+  color: #121208;\r\n }\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1668603900366,

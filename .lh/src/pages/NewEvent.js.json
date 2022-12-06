@@ -1,0 +1,62 @@
+{
+    "sourceFile": "src/pages/NewEvent.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1668764942864,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668765062335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n-function NewEventsPage(){\r\n+function NewEventPage(){\r\n     return(\r\n-        <div></div>\r\n+        <div>Create a new event.</div>\r\n     )\r\n }\r\n\\ No newline at end of file\n \r\n-export default NewEventsPage;\n+export default NewEventPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669027670386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,12 @@\n+import NewEventForm from \"../components/events/NewEventForm\";\r\n+\r\n function NewEventPage(){\r\n     return(\r\n-        <div>Create a new event.</div>\r\n+        <section>\r\n+            <h1>Add New Event</h1>\r\n+            <NewEventForm/>\r\n+        </section>\r\n     )\r\n }\r\n \r\n export default NewEventPage;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669118621431,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n function NewEventPage(){\r\n     return(\r\n         <section>\r\n             <h1>Add New Event</h1>\r\n-            <NewEventForm/>\r\n+            <NewEventForm onAddEvent/>\r\n         </section>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1669118690803,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,15 @@\n import NewEventForm from \"../components/events/NewEventForm\";\r\n \r\n function NewEventPage(){\r\n+\r\n+    function addEventHandler(eventData){\r\n+\r\n+    }\r\n     return(\r\n         <section>\r\n             <h1>Add New Event</h1>\r\n-            <NewEventForm onAddEvent/>\r\n+            <NewEventForm onAddEvent={addEventHandler}/>\r\n         </section>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1669120055184,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n function NewEventPage(){\r\n \r\n     function addEventHandler(eventData){\r\n-\r\n+        fetch('https://event-website-project-ee45b-default-rtdb.firebaseio.com/');\r\n     }\r\n     return(\r\n         <section>\r\n             <h1>Add New Event</h1>\r\n"
+                },
+                {
+                    "date": 1669120307442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n function NewEventPage(){\r\n \r\n     function addEventHandler(eventData){\r\n-        fetch('https://event-website-project-ee45b-default-rtdb.firebaseio.com/');\r\n+        fetch('https://event-website-project-ee45b-default-rtdb.firebaseio.com/events.json');\r\n     }\r\n     return(\r\n         <section>\r\n             <h1>Add New Event</h1>\r\n"
+                },
+                {
+                    "date": 1669126270475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,18 @@\n \r\n function NewEventPage(){\r\n \r\n     function addEventHandler(eventData){\r\n-        fetch('https://event-website-project-ee45b-default-rtdb.firebaseio.com/events.json');\r\n+        fetch(\r\n+            'https://event-website-project-ee45b-default-rtdb.firebaseio.com/events.json',\r\n+            {\r\n+                method:'POST',\r\n+                body: JSON.stringify(eventData),\r\n+                headers:{\r\n+                    'Content-Type': 'application/json'\r\n+                }\r\n+            }\r\n+        );\r\n     }\r\n     return(\r\n         <section>\r\n             <h1>Add New Event</h1>\r\n"
+                },
+                {
+                    "date": 1669185742253,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n import NewEventForm from \"../components/events/NewEventForm\";\r\n+import {useHistory} from 'react-router-dom'\r\n \r\n function NewEventPage(){\r\n+    const history=useHistory();\r\n \r\n     function addEventHandler(eventData){\r\n         fetch(\r\n             'https://event-website-project-ee45b-default-rtdb.firebaseio.com/events.json',\r\n"
+                },
+                {
+                    "date": 1669193250219,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,9 +13,11 @@\n                 headers:{\r\n                     'Content-Type': 'application/json'\r\n                 }\r\n             }\r\n-        );\r\n+        ).then(() => {\r\n+            history.push()\r\n+        });\r\n     }\r\n     return(\r\n         <section>\r\n             <h1>Add New Event</h1>\r\n"
+                },
+                {
+                    "date": 1669193523397,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import NewEventForm from \"../components/events/NewEventForm\";\r\n-import {useHistory} from 'react-router-dom'\r\n+import {Navigate, useNavigate} from 'react-router-dom'\r\n \r\n function NewEventPage(){\r\n-    const history=useHistory();\r\n+    const navigate=useNavigate();\r\n \r\n     function addEventHandler(eventData){\r\n         fetch(\r\n             'https://event-website-project-ee45b-default-rtdb.firebaseio.com/events.json',\r\n@@ -14,9 +14,9 @@\n                     'Content-Type': 'application/json'\r\n                 }\r\n             }\r\n         ).then(() => {\r\n-            history.push()\r\n+            navigate(\"/\");\r\n         });\r\n     }\r\n     return(\r\n         <section>\r\n"
+                },
+                {
+                    "date": 1669193994358,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n import NewEventForm from \"../components/events/NewEventForm\";\r\n-import {Navigate, useNavigate} from 'react-router-dom'\r\n+import {useNavigate} from 'react-router-dom'\r\n \r\n function NewEventPage(){\r\n     const navigate=useNavigate();\r\n \r\n@@ -25,5 +25,8 @@\n         </section>\r\n     )\r\n }\r\n \r\n-export default NewEventPage;\n\\ No newline at end of file\n+export default NewEventPage;\r\n+\r\n+\r\n+\r\n"
+                }
+            ],
+            "date": 1668764942864,
+            "name": "Commit-0",
+            "content": "function NewEventsPage(){\r\n    return(\r\n        <div></div>\r\n    )\r\n}\r\n\r\nexport default NewEventsPage;"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/components/layout/Layout.module.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1669022891373,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1669022891373,
+            "name": "Commit-0",
+            "content": ".main {\r\n    margin: 3rem auto;\r\n    width: 90%;\r\n    max-width: 40rem;\r\n  }"
+        }
+    ]
+}

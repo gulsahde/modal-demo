@@ -1,0 +1,46 @@
+{
+    "sourceFile": "src/components/events/EventList.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1668932851708,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668934387719,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n-function EventList(){\r\n+import classes from './EventList.module.css'\r\n+function EventList(props){\r\n     return(\r\n-\r\n+        <ul className={classes.list}></ul>\r\n     )\r\n }\r\n \r\n export default EventList;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1668934879550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,18 @@\n+import EventItem from './EventItem';\r\n import classes from './EventList.module.css'\r\n function EventList(props){\r\n     return(\r\n-        <ul className={classes.list}></ul>\r\n+        <ul className={classes.list}>\r\n+            {props.events.map(event => <EventItem \r\n+            key={event.id} \r\n+            id={event.id} \r\n+            image={event.image} \r\n+            title={event.title}\r\n+            location={event.location}\r\n+            description={event.description}\r\n+            />)}\r\n+        </ul>\r\n     )\r\n }\r\n \r\n export default EventList;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669805734558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n import EventItem from './EventItem';\r\n import classes from './EventList.module.css'\r\n+\r\n function EventList(props){\r\n     return(\r\n         <ul className={classes.list}>\r\n             {props.events.map(event => <EventItem \r\n"
+                },
+                {
+                    "date": 1669805760735,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n function EventList(props){\r\n     return(\r\n         <ul className={classes.list}>\r\n-            {props.events.map(event => <EventItem \r\n+            {props.events.map((event) => <EventItem \r\n             key={event.id} \r\n             id={event.id} \r\n             image={event.image} \r\n             title={event.title}\r\n"
+                },
+                {
+                    "date": 1669805779175,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,15 +3,16 @@\n \r\n function EventList(props){\r\n     return(\r\n         <ul className={classes.list}>\r\n-            {props.events.map((event) => <EventItem \r\n-            key={event.id} \r\n-            id={event.id} \r\n-            image={event.image} \r\n-            title={event.title}\r\n-            location={event.location}\r\n-            description={event.description}\r\n+            {props.events.map((event) => \r\n+            <EventItem \r\n+                key={event.id} \r\n+                id={event.id} \r\n+                image={event.image} \r\n+                title={event.title}\r\n+                location={event.location}\r\n+                description={event.description}\r\n             />)}\r\n         </ul>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1669805815125,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,8 +13,8 @@\n                 location={event.location}\r\n                 description={event.description}\r\n             />)}\r\n         </ul>\r\n-    )\r\n+    );\r\n }\r\n \r\n export default EventList;\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669805883571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,17 +3,17 @@\n \r\n function EventList(props){\r\n     return(\r\n         <ul className={classes.list}>\r\n-            {props.events.map((event) => \r\n+            {props.events.map((event) => (\r\n             <EventItem \r\n                 key={event.id} \r\n                 id={event.id} \r\n                 image={event.image} \r\n                 title={event.title}\r\n                 location={event.location}\r\n                 description={event.description}\r\n-            />)}\r\n+            />))}\r\n         </ul>\r\n     );\r\n }\r\n \r\n"
+                }
+            ],
+            "date": 1668932851708,
+            "name": "Commit-0",
+            "content": "function EventList(){\r\n    return(\r\n\r\n    )\r\n}\r\n\r\nexport default EventList;"
+        }
+    ]
+}

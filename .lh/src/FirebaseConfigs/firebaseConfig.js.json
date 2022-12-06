@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/FirebaseConfigs/firebaseConfig.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1670138336135,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1670138550363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n-\r\n import { initializeApp } from \"firebase/app\";\r\n+import {getAuth} from \"firebase/auth\";\r\n+import {getFirestore} from \"firebase/firestore\";\r\n+import {getStorage} from \"firebase/storage\";\r\n \r\n const firebaseConfig = {\r\n   apiKey: \"AIzaSyBRa6QCL6CZ8Ift3ClaYAxkn8OpPFSZ7C0\",\r\n   authDomain: \"event-website-project-ee45b.firebaseapp.com\",\r\n@@ -11,5 +13,8 @@\n   appId: \"1:428593338326:web:dc370e9a2fb49320fe3677\"\r\n };\r\n \r\n // Initialize Firebase\r\n-const app = initializeApp(firebaseConfig);\n\\ No newline at end of file\n+const app = initializeApp(firebaseConfig);\r\n+export const auth = getAuth(app);\r\n+export const storage = getStorage(app);\r\n+export const db = getFirestore(app);\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1670138336135,
+            "name": "Commit-0",
+            "content": "\r\nimport { initializeApp } from \"firebase/app\";\r\n\r\nconst firebaseConfig = {\r\n  apiKey: \"AIzaSyBRa6QCL6CZ8Ift3ClaYAxkn8OpPFSZ7C0\",\r\n  authDomain: \"event-website-project-ee45b.firebaseapp.com\",\r\n  databaseURL: \"https://event-website-project-ee45b-default-rtdb.firebaseio.com\",\r\n  projectId: \"event-website-project-ee45b\",\r\n  storageBucket: \"event-website-project-ee45b.appspot.com\",\r\n  messagingSenderId: \"428593338326\",\r\n  appId: \"1:428593338326:web:dc370e9a2fb49320fe3677\"\r\n};\r\n\r\n// Initialize Firebase\r\nconst app = initializeApp(firebaseConfig);"
+        }
+    ]
+}

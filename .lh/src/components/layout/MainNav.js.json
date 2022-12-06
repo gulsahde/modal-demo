@@ -1,0 +1,74 @@
+{
+    "sourceFile": "src/components/layout/MainNav.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 14,
+            "patches": [
+                {
+                    "date": 1668772543443,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1668775489778,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,18 @@\n+import { Link } from 'react-router-dom'\r\n function MainNav(){\r\n     return(\r\n         // The header component which in the end will then wrap all the items that should go into this header.\r\n         <header>\r\n+            <div>\r\n+                <nav>\r\n+                    <ul>\r\n+                        <li>\r\n+                            <Link>Some Links!</Link>\r\n+                        </li>\r\n+                    </ul>\r\n+                </nav>\r\n+            </div>\r\n \r\n         </header>\r\n     )\r\n }\r\n"
+                },
+                {
+                    "date": 1668775496541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n             <div>\r\n                 <nav>\r\n                     <ul>\r\n                         <li>\r\n-                            <Link>Some Links!</Link>\r\n+                            <Link>Some Link</Link>\r\n                         </li>\r\n                     </ul>\r\n                 </nav>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1668775554210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,10 +6,16 @@\n             <div>\r\n                 <nav>\r\n                     <ul>\r\n                         <li>\r\n-                            <Link>Some Link</Link>\r\n+                            <Link to=\"/\">All Evenets</Link>\r\n                         </li>\r\n+                        <li>\r\n+                            <Link to=\"/new-event\">New Event</Link>\r\n+                        </li>\r\n+                        <li>\r\n+                            <Link to=\"/favorites\">Favorites</Link>\r\n+                        </li>\r\n                     </ul>\r\n                 </nav>\r\n             </div>\r\n \r\n"
+                },
+                {
+                    "date": 1668777550705,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,11 @@\n import { Link } from 'react-router-dom'\r\n+import classes from './MainNav.module.css'\r\n+\r\n function MainNav(){\r\n     return(\r\n         // The header component which in the end will then wrap all the items that should go into this header.\r\n-        <header>\r\n+        <header className={classes.header}>\r\n             <div>\r\n                 <nav>\r\n                     <ul>\r\n                         <li>\r\n"
+                },
+                {
+                    "date": 1668777925056,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,8 @@\n import classes from './MainNav.module.css'\r\n \r\n function MainNav(){\r\n     return(\r\n-        // The header component which in the end will then wrap all the items that should go into this header.\r\n         <header className={classes.header}>\r\n             <div>\r\n                 <nav>\r\n                     <ul>\r\n"
+                },
+                {
+                    "date": 1668777962427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n \r\n function MainNav(){\r\n     return(\r\n         <header className={classes.header}>\r\n+            <div>Events</div>\r\n             <div>\r\n                 <nav>\r\n                     <ul>\r\n                         <li>\r\n"
+                },
+                {
+                    "date": 1668777981677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,10 +3,12 @@\n \r\n function MainNav(){\r\n     return(\r\n         <header className={classes.header}>\r\n-            <div>Events</div>\r\n             <div>\r\n+                <h1>Events</h1>\r\n+            </div>\r\n+            <div>\r\n                 <nav>\r\n                     <ul>\r\n                         <li>\r\n                             <Link to=\"/\">All Evenets</Link>\r\n"
+                },
+                {
+                    "date": 1668778004816,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,12 +3,10 @@\n \r\n function MainNav(){\r\n     return(\r\n         <header className={classes.header}>\r\n+            <div>Events</div>\r\n             <div>\r\n-                <h1>Events</h1>\r\n-            </div>\r\n-            <div>\r\n                 <nav>\r\n                     <ul>\r\n                         <li>\r\n                             <Link to=\"/\">All Evenets</Link>\r\n"
+                },
+                {
+                    "date": 1668778330241,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n function MainNav(){\r\n     return(\r\n         <header className={classes.header}>\r\n-            <div>Events</div>\r\n+            <div className={classes.logo}>Events</div>\r\n             <div>\r\n                 <nav>\r\n                     <ul>\r\n                         <li>\r\n"
+                },
+                {
+                    "date": 1668932138600,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,8 @@\n                         </li>\r\n                     </ul>\r\n                 </nav>\r\n             </div>\r\n-\r\n         </header>\r\n     )\r\n }\r\n \r\n"
+                },
+                {
+                    "date": 1669026771616,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n                         <li>\r\n                             <Link to=\"/\">All Evenets</Link>\r\n                         </li>\r\n                         <li>\r\n-                            <Link to=\"/new-event\">New Event</Link>\r\n+                            <Link to=\"/new-event\">Add New Event</Link>\r\n                         </li>\r\n                         <li>\r\n                             <Link to=\"/favorites\">Favorites</Link>\r\n                         </li>\r\n"
+                },
+                {
+                    "date": 1669795342714,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n                         <li>\r\n                             <Link to=\"/new-event\">Add New Event</Link>\r\n                         </li>\r\n                         <li>\r\n-                            <Link to=\"/favorites\">Favorites</Link>\r\n+                            <Link to=\"/favorites\">My Favorites</Link>\r\n                         </li>\r\n                     </ul>\r\n                 </nav>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1670143133339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,12 @@\n import { Link } from 'react-router-dom'\r\n import classes from './MainNav.module.css'\r\n+import {useContext} from 'react';\r\n+import FavoritesContext from '../../store/favorites-context';\r\n \r\n function MainNav(){\r\n+\r\n+    const favoriteCtx = useContext(FavoritesContext);\r\n     return(\r\n         <header className={classes.header}>\r\n             <div className={classes.logo}>Events</div>\r\n             <div>\r\n@@ -14,9 +18,12 @@\n                         <li>\r\n                             <Link to=\"/new-event\">Add New Event</Link>\r\n                         </li>\r\n                         <li>\r\n-                            <Link to=\"/favorites\">My Favorites</Link>\r\n+                            <Link to=\"/favorites\">\r\n+                                My Favorites\r\n+                                <span className={classes.badge}>{favoriteCtx.totalFavorites}</span> \r\n+                            </Link>\r\n                         </li>\r\n                     </ul>\r\n                 </nav>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1670332770913,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n \r\n     const favoriteCtx = useContext(FavoritesContext);\r\n     return(\r\n         <header className={classes.header}>\r\n-            <div className={classes.logo}>Events</div>\r\n+            <div className={classes.logo}>Discover Events</div>\r\n             <div>\r\n                 <nav>\r\n                     <ul>\r\n                         <li>\r\n"
+                }
+            ],
+            "date": 1668772543443,
+            "name": "Commit-0",
+            "content": "function MainNav(){\r\n    return(\r\n        // The header component which in the end will then wrap all the items that should go into this header.\r\n        <header>\r\n\r\n        </header>\r\n    )\r\n}\r\n\r\nexport default MainNav;"
+        }
+    ]
+}

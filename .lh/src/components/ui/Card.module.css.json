@@ -1,0 +1,86 @@
+{
+    "sourceFile": "src/components/ui/Card.module.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 17,
+            "patches": [
+                {
+                    "date": 1669013192691,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1669018124985,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n .card {\r\n-    background-color: white;\r\n+    background-color: red;\r\n     border-radius: 6px;\r\n     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669018132000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n .card {\r\n-    background-color: red;\r\n+    background-color: white;\r\n     border-radius: 6px;\r\n     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669018267678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n .card {\r\n     background-color: white;\r\n     border-radius: 6px;\r\n-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);\r\n+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2);\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669018275053,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n .card {\r\n     background-color: white;\r\n     border-radius: 6px;\r\n-    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2);\r\n+    box-shadow: 0 50px 8px rgba(0, 0, 0, 0.2);\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669018287187,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n .card {\r\n     background-color: white;\r\n     border-radius: 6px;\r\n-    box-shadow: 0 50px 8px rgba(0, 0, 0, 0.2);\r\n+    box-shadow: 0 2px 80px rgba(0, 0, 0, 0.2);\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669018294449,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n .card {\r\n     background-color: white;\r\n     border-radius: 6px;\r\n-    box-shadow: 0 2px 80px rgba(0, 0, 0, 0.2);\r\n+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669018369943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n .card {\r\n     background-color: white;\r\n-    border-radius: 6px;\r\n+    border-radius: 36px;\r\n     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669018376014,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n .card {\r\n     background-color: white;\r\n-    border-radius: 36px;\r\n+    border-radius: 6px;\r\n     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669019335450,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n .card {\r\n     background-color: white;\r\n     border-radius: 6px;\r\n-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);\r\n+    box-shadow: 0 2px 8px red;\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669019346927,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n .card {\r\n     background-color: white;\r\n     border-radius: 6px;\r\n-    box-shadow: 0 2px 8px red;\r\n+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1669019440424,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n .card {\r\n     background-color: white;\r\n     border-radius: 6px;\r\n+    margin:20px; /*I added this line*/\r\n     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670331296081,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n .card {\r\n-    background-color: white;\r\n+    background-color:#d1b9b5;\r\n     border-radius: 6px;\r\n     margin:20px; /*I added this line*/\r\n     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670331322230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n .card {\r\n-    background-color:#d1b9b5;\r\n+    background-color:#d8d8c1;\r\n     border-radius: 6px;\r\n     margin:20px; /*I added this line*/\r\n     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670331336642,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n .card {\r\n-    background-color:#d8d8c1;\r\n+    background-color:#ad7991\r\n     border-radius: 6px;\r\n     margin:20px; /*I added this line*/\r\n     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670331352308,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n .card {\r\n-    background-color:#ad7991\r\n+    background-color:#253b31;\r\n     border-radius: 6px;\r\n     margin:20px; /*I added this line*/\r\n     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670331370578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n .card {\r\n-    background-color:#253b31;\r\n+    background-color:#d8d8c1;\r\n     border-radius: 6px;\r\n     margin:20px; /*I added this line*/\r\n     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670331730999,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n .card {\r\n     background-color:#d8d8c1;\r\n     border-radius: 6px;\r\n-    margin:20px; /*I added this line*/\r\n+    margin:20px; \r\n     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);\r\n   }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1669013192690,
+            "name": "Commit-0",
+            "content": ".card {\r\n    background-color: white;\r\n    border-radius: 6px;\r\n    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);\r\n  }"
+        }
+    ]
+}

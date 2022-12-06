@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/components/events/EventItem.module.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1668932124743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1670331919789,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,10 +32,10 @@\n   \r\n   .actions button {\r\n     font: inherit;\r\n     cursor: pointer;\r\n-    color: #77002e;\r\n-    border: 1px solid #77002e;\r\n+    color: #121208;\r\n+    border: 1px solid #121208;\r\n     background-color: transparent;\r\n     padding: 0.5rem 1.5rem;\r\n     border-radius: 4px;\r\n   }\r\n"
+                },
+                {
+                    "date": 1670331951921,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -41,6 +41,6 @@\n   }\r\n   \r\n   .actions button:hover,\r\n   .actions button:active {\r\n-    background-color: #ffe2ed;\r\n+    background-color: #253b31;\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670331973393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n   }\r\n   \r\n   .content h3 {\r\n     font-size: 1.25rem;\r\n-    color: #2c292b;\r\n+    color: #d1b9b5;\r\n   }\r\n   \r\n   .actions {\r\n     padding: 1.5rem;\r\n"
+                },
+                {
+                    "date": 1670331978966,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n   }\r\n   \r\n   .content h3 {\r\n     font-size: 1.25rem;\r\n-    color: #d1b9b5;\r\n+    color: #2c292b;\r\n   }\r\n   \r\n   .actions {\r\n     padding: 1.5rem;\r\n"
+                },
+                {
+                    "date": 1670331988222,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n   }\r\n   \r\n   .content h3 {\r\n     font-size: 1.25rem;\r\n-    color: #2c292b;\r\n+    color: #121208;\r\n   }\r\n   \r\n   .actions {\r\n     padding: 1.5rem;\r\n"
+                },
+                {
+                    "date": 1670332004397,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n   }\r\n   \r\n   .content h3 {\r\n     font-size: 1.25rem;\r\n-    color: #121208;\r\n+    color: red;\r\n   }\r\n   \r\n   .actions {\r\n     padding: 1.5rem;\r\n"
+                },
+                {
+                    "date": 1670332033089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n   }\r\n   \r\n   .content h3 {\r\n     font-size: 1.25rem;\r\n-    color: red;\r\n+    color: #121208;\r\n   }\r\n   \r\n   .actions {\r\n     padding: 1.5rem;\r\n@@ -42,5 +42,6 @@\n   \r\n   .actions button:hover,\r\n   .actions button:active {\r\n     background-color: #253b31;\r\n+    color: red;\r\n   }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1670332040334,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -42,6 +42,6 @@\n   \r\n   .actions button:hover,\r\n   .actions button:active {\r\n     background-color: #253b31;\r\n-    color: red;\r\n+    color: #d1b9b5;\r\n   }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1668932124743,
+            "name": "Commit-0",
+            "content": ".item {\r\n    margin: 1rem 0;\r\n  }\r\n  \r\n  .image {\r\n    width: 100%;\r\n    height: 20rem;\r\n    overflow: hidden;\r\n    border-top-right-radius: 6px;\r\n    border-top-left-radius: 6px;\r\n  }\r\n  \r\n  .image img {\r\n    width: 100%;\r\n    object-fit: cover;\r\n  }\r\n  \r\n  .content {\r\n    text-align: center;\r\n    padding: 1rem;\r\n  }\r\n  \r\n  .content h3 {\r\n    font-size: 1.25rem;\r\n    color: #2c292b;\r\n  }\r\n  \r\n  .actions {\r\n    padding: 1.5rem;\r\n    text-align: center;\r\n  }\r\n  \r\n  .actions button {\r\n    font: inherit;\r\n    cursor: pointer;\r\n    color: #77002e;\r\n    border: 1px solid #77002e;\r\n    background-color: transparent;\r\n    padding: 0.5rem 1.5rem;\r\n    border-radius: 4px;\r\n  }\r\n  \r\n  .actions button:hover,\r\n  .actions button:active {\r\n    background-color: #ffe2ed;\r\n  }"
+        }
+    ]
+}
